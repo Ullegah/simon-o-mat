@@ -137,37 +137,70 @@ function ladeFragen() {
     });
 }
 
-function erstelleDiagramm(ergebnisse) {
-    const parteienSortiert = Object.entries(ergebnisse).sort((a, b) => b[1] - a[1]);
-    const parteiNamen = parteienSortiert.map(entry => entry[0]);
-    const punkte = parteienSortiert.map(entry => entry[1]);
+function auswerten() {
+    const ergebnisse = {};
+    const wahlomatForm = document.getElementById("wahlomat-form");
+    const kategorienErgebnis = {};
 
-    const ctx = document.getElementById('balkenDiagramm').getContext('2d');
+    // Durch alle Fragen iterieren
+    fragen.forEach((frage, index) => {
+        const antwort = wahlomatForm[`frage${index}`]?.value; // Verwende optionales chaining
+        if (antwort !== undefined) {
+            for (const partei in parteien) {
+                if (!ergebnisse[partei]) {
+                    ergebnisse[partei] = 0;
+                }
+                ergebnisse[partei] += parteien[partei][index] * parseInt(antwort);
+            }
+
+            // Bestimme die politische Ausrichtung der gewählten Antwort
+            const kategorie = antwortKategorien[index][parseInt(antwort) + 1]; // +1 wegen der Indexierung
+            if (!kategorienErgebnis[kategorie]) {
+                kategorienErgebnis[kategorie] = 0;
+            }
+            kategorienErgebnis[kategorie] += 1; // Zähle die Anzahl der Antworten pro Kategorie
+        }
+    });
+
+    // Ergebnisse in das Ergebnis-Div einfügen
+    const ergebnisDiv = document.getElementById("ergebnis");
+    ergebnisDiv.innerHTML = "<h2>Ergebnisse:</h2>";
+    ergebnisDiv.innerHTML += "<table><tr><th>Partei</th><th>Punkte</th></tr>";
+
+    // Ergebnisse nach Punkten sortieren
+    const ergebnisseSortiert = Object.entries(ergebnisse).sort((a, b) => b[1] - a[1]);
+    
+    for (const [partei, punkte] of ergebnisseSortiert) {
+        ergebnisDiv.innerHTML += `<tr><td>${partei}</td><td>${punkte}</td></tr>`;
+    }
+    ergebnisDiv.innerHTML += "</table>";
+
+    // Kategorien in das Ergebnis-Div einfügen
+    ergebnisDiv.innerHTML += "<h3>Kategorien:</h3>";
+    ergebnisDiv.innerHTML += "<table><tr><th>Kategorie</th><th>Anzahl</th></tr>";
+    for (const kategorie in kategorienErgebnis) {
+        ergebnisDiv.innerHTML += `<tr><td>${kategorie}</td><td>${kategorienErgebnis[kategorie]}</td></tr>`;
+    }
+    ergebnisDiv.innerHTML += "</table>";
+
+    // Diagramm erstellen
+    erstelleDiagramm(ergebnisseSortiert);
+}
+
+function erstelleDiagramm(ergebnisse) {
+    const ctx = document.getElementById('diagramm').getContext('2d');
+    const parteien = ergebnisse.map(item => item[0]);
+    const punkte = ergebnisse.map(item => item[1]);
+
     const diagramm = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: parteiNamen,
+            labels: parteien,
             datasets: [{
                 label: 'Punkte',
                 data: punkte,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(201, 203, 207, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                    'rgba(201, 203, 207, 1)'
-                ],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1
             }]
         },
