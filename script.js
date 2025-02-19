@@ -47,3 +47,19 @@ function evaluateResults() {
 // Initialisiere das Fragen-Display
 displayQuestions();
 
+function evaluateResults() {
+    const results = { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 };
+
+    userAnswers.forEach(answer => {
+        for (const party in answer) {
+            results[party] += answer[party];
+        }
+    });
+
+    const resultsContainer = document.getElementById('results-container');
+    resultsContainer.innerHTML = '<h2>Ergebnisse</h2>';
+    for (const party in results) {
+        resultsContainer.innerHTML += `<p>${party}: ${results[party]} Punkte</p>`;
+    }
+}
+
