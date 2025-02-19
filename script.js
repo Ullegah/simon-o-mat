@@ -216,6 +216,30 @@ function erstelleDiagramm(ergebnisse) {
         }
     });
 }
+    const diagramm = new Chart(ctx, {
+        type: 'pie', // Kuchendiagramm
+        data: {
+            labels: parteienNamen,
+            datasets: [{
+                label: 'Punkte',
+                data: punkte,
+                backgroundColor: parteienNamen.map(partei => farben[partei]),
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Ergebnisse',
+                }
+            }
+        }
+    });
+}
 
     const diagramm = new Chart(ctx, {
         type: 'bar',
