@@ -1,48 +1,58 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const fragenContainer = document.getElementById("fragen-container");
-    const ergebnisDiv = document.getElementById("ergebnis");
+const fragen = [
+    "Soll der Mindestlohn erhöht werden?",
+    "Soll Cannabis legalisiert werden?",
+    "Soll Deutschland aus der EU austreten?",
+    // ... bis zu 50 Fragen
+];
 
-    const fragen = [
-        "Soll der Mindestlohn erhöht werden?",
-        "Soll Cannabis legalisiert werden?",
-        "Soll Deutschland aus der EU austreten?",
-        // ...füge hier weitere 47 Fragen hinzu
-    ];
+// Parteien mit ihren Positionen zu den Fragen
+const parteien = {
+    "CDU/CSU":  [1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1],
+    "SPD":  [0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1],
+    "Grüne":  [-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0],
+    "FDP":  [-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0],
+    "AfD":  [-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0],
+    "Die Linke":  [-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0]
+};
 
-    // Fragen dynamisch erzeugen
-    fragen.forEach((frage, index) => {
-        const div = document.createElement("div");
-        div.classList.add("frage");
-        div.innerHTML = `
-            <p>${index + 1}. ${frage}</p>
-            <label><input type="radio" name="frage${index}" value="1"> Ja</label>
-            <label><input type="radio" name="frage${index}" value="0"> Neutral</label>
-            <label><input type="radio" name="frage${index}" value="-1"> Nein</label>
-        `;
-        fragenContainer.appendChild(div);
+// Klick-Event für die Auswertung
+document.getElementById("auswerten-btn").addEventListener("click", function () {
+    const antworten = [];
+    fragen.forEach((_, index) => {
+        const ausgewählt = document.querySelector(`input[name="frage${index}"]:checked`);
+        antworten.push(ausgewählt ? parseInt(ausgewählt.value) : 0);
     });
 
-    document.getElementById("auswerten-btn").addEventListener("click", function () {
-        const antworten = [];
-        fragen.forEach((_, index) => {
-            const ausgewählt = document.querySelector(`input[name="frage${index}"]:checked`);
-            antworten.push(ausgewählt ? parseInt(ausgewählt.value) : 0);
-        });
-
-        const ergebnis = berechneErgebnis(antworten);
-        ergebnisDiv.innerHTML = `<h2>Ergebnis:</h2><p>${ergebnis}</p>`;
-    });
-
-    function berechneErgebnis(antworten) {
-        // Hier kommt der Algorithmus für die Übereinstimmung mit den Parteien hin
-        return "Parteien-Berechnung folgt...";
-    }
+    const ergebnis = berechneErgebnis(antworten);
+    zeigeErgebnis(ergebnis);
 });
 
+// ✅ Berechnung der Punkte
+function berechneErgebnis(antworten) {
+    let ergebnisse = {};
 
-const parteien = {
-    "Partei A":  [1, 0, -1, 1, ..., -1], // 50 Werte
-    "Partei B":  [0, 1, -1, -1, ..., 1],
-    "Partei C":  [-1, -1, 1, 0, ..., 0],
-    // Weitere Parteien hinzufügen
-};
+    Object.keys(parteien).forEach((partei) => {
+        let punkte = 0;
+        parteien[partei].forEach((wert, index) => {
+            if (wert === antworten[index]) {
+                punkte++; // +1 Punkt pro Übereinstimmung
+            }
+        });
+        ergebnisse[partei] = punkte;
+    });
+
+    return ergebnisse;
+}
+
+// 📊 Ergebnis anzeigen
+function zeigeErgebnis(ergebnisse) {
+    let ergebnisText = "<h2>Ergebnis:</h2><ul>";
+    Object.entries(ergebnisse)
+        .sort((a, b) => b[1] - a[1]) // Sortiert nach Punkten (höchste zuerst)
+        .forEach(([partei, punkte]) => {
+            ergebnisText += `<li><strong>${partei}:</strong> ${punkte} Punkte</li>`;
+        });
+
+    ergebnisText += "</ul>";
+    document.getElementById("ergebnis").innerHTML = ergebnisText;
+}
