@@ -144,8 +144,8 @@ function auswerten() {
 
     // Durch alle Fragen iterieren
     fragen.forEach((frage, index) => {
-        const antwort = wahlomatForm[`frage${index}`].value;
-        if (antwort) {
+        const antwort = wahlomatForm[`frage${index}`]?.value; // Verwende optionales chaining
+        if (antwort !== undefined) {
             for (const partei in parteien) {
                 if (!ergebnisse[partei]) {
                     ergebnisse[partei] = 0;
@@ -198,7 +198,6 @@ function erstelleDiagramm(ergebnisse) {
                     'rgba(75, 192, 192, 0.2)',
                     'rgba(153, 102, 255, 0.2)',
                     'rgba(255, 159, 64, 0.2)',
-                    // Weitere Farben hinzufügen für weitere Parteien
                 ],
                 borderColor: [
                     'rgba(255, 99, 132, 1)',
@@ -207,7 +206,6 @@ function erstelleDiagramm(ergebnisse) {
                     'rgba(75, 192, 192, 1)',
                     'rgba(153, 102, 255, 1)',
                     'rgba(255, 159, 64, 1)',
-                    // Weitere Farben hinzufügen für weitere Parteien
                 ],
                 borderWidth: 1
             }]
