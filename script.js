@@ -62,6 +62,10 @@ const parteien = {
     "Die Linke":  [-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0]
 };
 
+document.addEventListener("DOMContentLoaded", function() {
+    ladeFragen(); // Ruft die Funktion zum Laden der Fragen auf
+});
+
 // Fragen in die Seite einfügen
 function ladeFragen() {
     const fragenContainer = document.getElementById("fragen-container");
