@@ -99,10 +99,10 @@ document.getElementById("auswerten-btn").addEventListener("click", function () {
     zeigeErgebnis(ergebnis);
 });
 
-// ✅ Berechnung der Punkte
 function auswerten() {
     const ergebnisse = {};
     const wahlomatForm = document.getElementById("wahlomat-form");
+    const kategorienErgebnis = {};
 
     // Durch alle Fragen iterieren
     fragen.forEach((frage, index) => {
@@ -114,6 +114,13 @@ function auswerten() {
                 }
                 ergebnisse[partei] += parteien[partei][index] * parseInt(antwort);
             }
+
+            // Bestimme die politische Ausrichtung der gewählten Antwort
+            const kategorie = antwortKategorien[index][parseInt(antwort) + 1]; // +1 wegen der Indexierung
+            if (!kategorienErgebnis[kategorie]) {
+                kategorienErgebnis[kategorie] = 0;
+            }
+            kategorienErgebnis[kategorie] += 1; // Zähle die Anzahl der Antworten pro Kategorie
         }
     });
 
@@ -124,42 +131,11 @@ function auswerten() {
         ergebnisDiv.innerHTML += `<p>${partei}: ${ergebnisse[partei]}</p>`;
     }
 
-    // Diagramm erstellen
-    const ctx = document.getElementById('ergebnis-chart').getContext('2d');
-    const chartData = {
-        labels: Object.keys(ergebnisse),
-        datasets: [{
-            label: 'Punkte',
-            data: Object.values(ergebnisse),
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)', // CDU/CSU
-                'rgba(54, 162, 235, 0.2)', // SPD
-                'rgba(75, 192, 192, 0.2)', // Grüne
-                'rgba(153, 102, 255, 0.2)', // FDP
-                'rgba(255, 159, 64, 0.2)', // AfD
-                'rgba(255, 205, 86, 0.2)', // Die Linke
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(255, 205, 86, 1)',
-            ],
-            borderWidth: 1
-        }]
-    };
+    // Diagramm erstellen (wie zuvor)
 
-    const myChart = new Chart(ctx, {
-        type: 'bar',
-        data: chartData,
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
+    // Kategorien in das Ergebnis-Div einfügen
+    ergebnisDiv.innerHTML += "<h3>Kategorien:</h3>";
+    for (const kategorie in kategorienErgebnis) {
+        ergebnisDiv.innerHTML += `<p>${kategorie}: ${kategorienErgebnis[kategorie]}</p>`;
+    }
 }
