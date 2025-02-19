@@ -4,7 +4,7 @@ const questions = [
         responses: {
             ja: { CDU: -1, AFD: 1, Grüne: 1, Die_Linke: 1, SPD: 1, FDP: 0 },
             nein: { CDU: 1, AFD: -1, Grüne: -1, Die_Linke: -1, SPD: -1, FDP: 0 },
-            neutral: {},
+            neutral: { CDU: 0, AFD: 0, Grüne: 0, Die_Linke: 0, SPD: 0, FDP: 0 },
         },
     },
     {
@@ -12,7 +12,7 @@ const questions = [
         responses: {
             ja: { CDU: 0, AFD: 0, Grüne: 1, Die_Linke: 1, SPD: 1, FDP: 0 },
             nein: { CDU: -1, AFD: 0, Grüne: -1, Die_Linke: -1, SPD: -1, FDP: -1 },
-            neutral: {},
+            neutral: { CDU: 0, AFD: 0, Grüne: 0, Die_Linke: 0, SPD: 0, FDP: 0 },
         },
     },
     {
@@ -20,7 +20,7 @@ const questions = [
         responses: {
             ja: { CDU: -1, AFD: -1, Grüne: 1, Die_Linke: 1, SPD: 1, FDP: 0 },
             nein: { CDU: 1, AFD: 1, Grüne: -1, Die_Linke: -1, SPD: -1, FDP: 0 },
-            neutral: {},
+            neutral: { CDU: 0, AFD: 0, Grüne: 0, Die_Linke: 0, SPD: 0, FDP: 0 },
         },
     },
     {
@@ -28,7 +28,7 @@ const questions = [
         responses: {
             ja: { CDU: 0, AFD: 0, Grüne: 0, Die_Linke: 1, SPD: 1, FDP: 0 },
             nein: { CDU: -1, AFD: 0, Grüne: -1, Die_Linke: -1, SPD: -1, FDP: 0 },
-            neutral: {},
+            neutral: { CDU: 0, AFD: 0, Grüne: 0, Die_Linke: 0, SPD: 0, FDP: 0 },
         },
     },
     {
@@ -36,7 +36,7 @@ const questions = [
         responses: {
             ja: { CDU: 0, AFD: 0, Grüne: 1, Die_Linke: 1, SPD: 1, FDP: 1 },
             nein: { CDU: -1, AFD: 0, Grüne: -1, Die_Linke: -1, SPD: -1, FDP: 0 },
-            neutral: {},
+            neutral: { CDU: 0, AFD: 0, Grüne: 0, Die_Linke: 0, SPD: 0, FDP: 0 },
         },
     },
 ];
