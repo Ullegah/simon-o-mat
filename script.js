@@ -39,3 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+
+const parteien = {
+    "Partei A":  [1, 0, -1, 1, ..., -1], // 50 Werte
+    "Partei B":  [0, 1, -1, -1, ..., 1],
+    "Partei C":  [-1, -1, 1, 0, ..., 0],
+    // Weitere Parteien hinzufügen
+};
