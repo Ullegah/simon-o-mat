@@ -1,4 +1,5 @@
- const fragen = [
+    <script>
+const fragen = [
             { text: "Sollten die Steuern erhöht werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
             { text: "Soll die Bundeswehr ausgebaut werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Rechts", "Mitte", "Links"] },
             { text: "Soll der Mindestlohn erhöht werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
