@@ -1,1 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#fragen-container {
+    text-align: left;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.frage {
+    margin-bottom: 15px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
