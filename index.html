@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wahl-O-Mat</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .question {
+            margin: 10px 0;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>Wahl-O-Mat</h1>
-    <form id="wahlForm">
-        <!-- Fragen werden hier hinzugefügt -->
-    </form>
-    <div id="ergebnis"></div>
-    <script src="script.js"></script>
-</body>
-</html>
+    <div id="fragenContainer"></div>
+    <button onclick="calculateResults()">Ergebnisse anzeigen</button>
+    <div class="result" id="resultContainer"></div>
