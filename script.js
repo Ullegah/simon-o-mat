@@ -183,6 +183,40 @@ function erstelleDiagramm(ergebnisse) {
     const parteienNamen = Object.keys(ergebnisse);
     const punkte = parteienNamen.map(partei => ergebnisse[partei]);
 
+    const farben = {
+        "CDU/CSU": 'rgba(0, 0, 0, 0.5)', // schwarz
+        "SPD": 'rgba(255, 0, 0, 0.5)', // rot
+        "Grüne": 'rgba(0, 128, 0, 0.5)', // grün
+        "FDP": 'rgba(255, 255, 0, 0.5)', // gelb
+        "AfD": 'rgba(0, 0, 255, 0.5)', // blau
+        "Die Linke": 'rgba(139, 0, 0, 0.5)', // dunkleres rot
+    };
+
+    const diagramm = new Chart(ctx, {
+        type: 'pie', // Kuchendiagramm
+        data: {
+            labels: parteienNamen,
+            datasets: [{
+                label: 'Punkte',
+                data: punkte,
+                backgroundColor: parteienNamen.map(partei => farben[partei]),
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Ergebnisse',
+                }
+            }
+        }
+    });
+}
+
     const diagramm = new Chart(ctx, {
         type: 'bar',
         data: {
