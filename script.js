@@ -1,136 +1,53 @@
-const fragen = [
-    "Sollten die Steuern erhöht werden?",
-    "Soll die Bundeswehr ausgebaut werden?",
-    "Soll der Mindestlohn erhöht werden?",
-    "Soll das Grundeinkommen eingeführt werden?",
-    "Soll die Förderung erneuerbarer Energien steigen?",
-    "Soll die EU stärker kontrolliert werden?",
-    "Soll der Verkehr auf öffentliche Verkehrsmittel umgestellt werden?",
-    "Soll die Atomkraft abgeschafft werden?",
-    "Soll die Schuldenbremse bestehen bleiben?",
-    "Soll der Zugang zu Gesundheitsdiensten verbessert werden?",
-    "Soll das Bildungssystem reformiert werden?",
-    "Soll die Einwanderung kontrolliert werden?",
-    "Soll der Kohleausstieg beschleunigt werden?",
-    "Soll das Bargeld abgeschafft werden?",
-    "Soll die Rente steigen?",
-    "Soll das Verbot von Tierversuchen beibehalten werden?",
-    "Soll die Digitalisierung in Schulen gefördert werden?",
-    "Soll die Überwachung durch den Staat zunehmen?",
-    "Soll der Mindestabstand zu Windkraftanlagen erhöht werden?",
-    "Soll die Lobbyarbeit transparenter werden?",
-    "Soll die Landwirtschaft umweltfreundlicher werden?",
-    "Soll der Wehrdienst wieder eingeführt werden?",
-    "Soll der öffentlich-rechtliche Rundfunk reformiert werden?",
-    "Soll die Gendergerechtigkeit gefördert werden?",
-    "Soll die EU-Armee eingeführt werden?",
-    "Soll die Unterstützung für Familien erhöht werden?",
-    "Soll der Zugang zu Bildung kostenlos sein?",
-    "Soll die Verbreitung von Fake News stärker bestraft werden?",
-    "Soll der Verkehr auf Elektromobilität umgestellt werden?",
-    "Soll die Altersvorsorge reformiert werden?",
-    "Soll die Schulpflicht abgeschafft werden?",
-    "Soll die Drogenpolitik liberalisiert werden?",
-    "Soll die Digitalisierung der Verwaltung vorangetrieben werden?",
-    "Soll der Einzelhandel am Sonntag geöffnet sein?",
-    "Soll die Förderung von Start-ups erhöht werden?"
-];
+function evaluate() {
+    const results = {
+        CDU: 0,
+        AFD: 0,
+        Grüne: 0,
+        Die_Linke: 0,
+        SPD: 0,
+        FDP: 0,
+    };
 
-// Zuordnung von Antworten
-const positionen = [
-    ["Links", "Mitte", "Rechts"],
-    ["Rechts", "Mitte", "Links"],
-    ["Links", "Mitte", "Rechts"],
-    ["Links", "Mitte", "Rechts"],
-    ["Mitte", "Links", "Rechts"],
-    ["Rechts", "Mitte", "Links"],
-    ["Links", "Mitte", "Rechts"],
-    ["Mitte", "Rechts", "Links"],
-    ["Rechts", "Mitte", "Links"],
-    ["Links", "Mitte", "Rechts"],
-    ["Mitte", "Links", "Rechts"],
-    ["Rechts", "Mitte", "Links"],
-    ["Links", "Mitte", "Rechts"],
-    ["Mitte", "Rechts", "Links"],
-    ["Links", "Mitte", "Rechts"],
-    ["Links", "Mitte", "Rechts"],
-    ["Mitte", "Links", "Rechts"],
-    ["Rechts", "Mitte", "Links"],
-    ["Rechts", "Mitte", "Links"],
-    ["Mitte", "Links", "Rechts"],
-    ["Links", "Mitte", "Rechts"],
-    ["Rechts", "Mitte", "Links"],
-    ["Mitte", "Links", "Rechts"],
-    ["Links", "Mitte", "Rechts"],
-    ["Rechts", "Mitte", "Links"],
-    ["Links", "Mitte", "Rechts"],
-    ["Rechts", "Mitte", "Links"],
-    ["Links", "Mitte", "Rechts"],
-    ["Mitte", "Rechts", "Links"],
-    ["Rechts", "Mitte", "Links"],
-    ["Mitte", "Links", "Rechts"],
-    ["Rechts", "Mitte", "Links"],
-    ["Mitte", "Links", "Rechts"]
-];
+    const directionCounts = {
+        rechts: 0,
+        links: 0,
+    };
 
-// Parteien und ihre Positionen zu den Fragen (0 = Neutral, 1 = Ja, -1 = Nein)
-const parteien = {
-    "CDU/CSU": [0, 1, 0, 1, 0, 1, -1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, -1, 0, 0, 1, 1, 0, 1, 1],
-    "SPD": [1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1],
-    "Grüne": [1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1],
-    "FDP": [0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0],
-    "AfD": [-1, 1, -1, 0, 0, 1, 1, -1, 1, 1, 0, -1, 1, -1, 0, 0, 0, 1, 1, -1, 1, 1, 1, 1, 0, 0, 1, 1, -1, -1],
-    "Die Linke": [1, -1, 1, 1, 1, -1, 1, 1, -1, 0, 1, -1, 1, 1, 1, -1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0],
-};
+    const questions = [
+        { question: "q1", responses: { ja: { CDU: -1, AFD: 1, Grüne: 1, Die_Linke: 1, SPD: 1, FDP: 0 }, nein: { CDU: 1, AFD: -1, Grüne: -1, Die_Linke: -1, SPD: -1, FDP: 0 }, neutral: {} } },
+        { question: "q2", responses: { ja: { CDU: 0, AFD: 0, Grüne: 1, Die_Linke: 1, SPD: 1, FDP: 0 }, nein: { CDU: -1, AFD: 0, Grüne: -1, Die_Linke: -1, SPD: -1, FDP: -1 }, neutral: {} } },
+        { question: "q3", responses: { ja: { CDU: -1, AFD: -1, Grüne: 1, Die_Linke: 1, SPD: 1, FDP: 0 }, nein: { CDU: 1, AFD: 1, Grüne: -1, Die_Linke: -1, SPD: -1, FDP: 0 }, neutral: {} } },
+        { question: "q4", responses: { ja: { CDU: 0, AFD: 0, Grüne: 0, Die_Linke: 1, SPD: 1, FDP: 0 }, nein: { CDU: -1, AFD: 0, Grüne: -1, Die_Linke: -1, SPD: -1, FDP: 0 }, neutral: {} } },
+        { question: "q5", responses: { ja: { CDU: 0, AFD: 0, Grüne: 1, Die_Linke: 1, SPD: 1, FDP: 1 }, nein: { CDU: -1, AFD: 0, Grüne: -1, Die_Linke: -1, SPD: -1, FDP: 0 }, neutral: {} } },
+    ];
 
-let currentQuestionIndex = 0;
-let results = {};
-
-function initializeResults() {
-    for (const partei in parteien) {
-        results[partei] = 0;
-    }
-}
-
-function displayQuestion() {
-    if (currentQuestionIndex < fragen.length) {
-        const frage = fragen[currentQuestionIndex];
-        const fragenContainer = document.getElementById('fragenContainer');
-        fragenContainer.innerHTML = `
-            <div class="question">
-                <h2>Frage ${currentQuestionIndex + 1}: ${frage}</h2>
-                <input type="radio" name="antwort" value="1"> Ja<br>
-                <input type="radio" name="antwort" value="0"> Neutral<br>
-                <input type="radio" name="antwort" value="-1"> Nein<br>
-            </div>
-        `;
-    } else {
-        displayFinalResults();
-    }
-}
-
-function nextQuestion() {
-    const selectedValue = document.querySelector('input[name="antwort"]:checked');
-    if (selectedValue) {
-        const value = parseInt(selectedValue.value);
-        for (const partei in parteien) {
-            results[partei] += parteien[partei][currentQuestionIndex] * value;
+    questions.forEach((q) => {
+        const selectedValue = document.querySelector(`input[name="${q.question}"]:checked`);
+        if (selectedValue) {
+            const response = selectedValue.value;
+            const partyPoints = q.responses[response];
+            for (const party in partyPoints) {
+                results[party] += partyPoints[party];
+            }
+            if (response === "ja") {
+                directionCounts.rechts++;
+            } else if (response === "nein") {
+                directionCounts.links++;
+            }
         }
-        currentQuestionIndex++;
-        displayQuestion();
-    } else {
-        alert("Bitte wählen Sie eine Antwort.");
-    }
+    });
+
+    displayResults(results, directionCounts);
 }
 
-function displayFinalResults() {
-    const resultContainer = document.getElementById('resultContainer');
-    resultContainer.innerHTML = '<h2>Ergebnisse:</h2>';
-    for (const partei in results) {
-        resultContainer.innerHTML += `<p>${partei}: ${results[partei]}</p>`;
-    }
-}
+function displayResults(results, directionCounts) {
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerHTML = "<h2>Auswertung</h2><p>Ergebnisse:</p><ul>";
 
-// Initialisierung
-initializeResults();
-displayQuestion();
+    for (const party in results) {
+        resultDiv.innerHTML += `<li>${party}: ${results[party]} Punkte</li>`;
+    }
+
+    resultDiv.innerHTML += `</ul><p>Fragen mit rechts: ${directionCounts.rechts}</p><p>Fragen mit links: ${directionCounts.links}</p>`;
+}
