@@ -103,6 +103,17 @@ function displayResults(results, directionCounts) {
     }
 
     resultDiv.innerHTML += `</ul><p>Fragen mit rechts: ${directionCounts.rechts}</p><p>Fragen mit links: ${directionCounts.links}</p>`;
+
+    // Zusätzliche Auswertung nach Parteien: Bestimmung der Partei mit den meisten Punkten
+    let maxPoints = -Infinity;
+    let bestParty = "";
+    for (const party in results) {
+        if (results[party] > maxPoints) {
+            maxPoints = results[party];
+            bestParty = party;
+        }
+    }
+    resultDiv.innerHTML += `<h3>Beste Übereinstimmung:</h3><p>${bestParty} mit ${maxPoints} Punkten</p>`;
 }
 
 // Aufruf der loadQuestions-Funktion beim Laden der Seite
