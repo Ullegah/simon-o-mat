@@ -134,4 +134,3 @@ function displayFinalResults() {
 // Initialisierung
 initializeResults();
 displayQuestion();
-
