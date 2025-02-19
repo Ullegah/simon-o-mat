@@ -1,3 +1,24 @@
+// Fragen in die Seite einfügen
+function ladeFragen() {
+    const fragenContainer = document.getElementById("fragen-container");
+    fragenContainer.innerHTML = ""; // Sicherstellen, dass der Container leer ist
+
+    fragen.forEach((frage, index) => {
+        const frageHTML = `
+            <div class="frage">
+                <p><strong>Frage ${index + 1}:</strong> ${frage}</p>
+                <label><input type="radio" name="frage${index}" value="1"> Ja</label>
+                <label><input type="radio" name="frage${index}" value="0"> Neutral</label>
+                <label><input type="radio" name="frage${index}" value="-1"> Nein</label>
+            </div>
+        `;
+        fragenContainer.innerHTML += frageHTML;
+    });
+}
+
+// Beim Laden der Seite die Fragen einfügen
+window.onload = ladeFragen;
+
 const fragen = [
     "Soll der Mindestlohn erhöht werden?",
     "Soll Cannabis legalisiert werden?",
