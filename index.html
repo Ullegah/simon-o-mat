@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wahl-O-Mat</title>
+    <title>Fragen-Antworten</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Wahl-O-Mat</h1>
-    <div id="questions"></div>
-    <button onclick="evaluate()">Auswerten</button>
-    <div id="result"></div>
+    <div id="app">
+        <h1>Fragen zur Umfrage</h1>
+        <div id="questions"></div>
+        <button onclick="loadQuestions()">Fragen laden</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
