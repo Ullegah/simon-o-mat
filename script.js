@@ -62,11 +62,16 @@ const parteien = {
     "Die Linke":  [-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0]
 };
 
-document.addEventListener("DOMContentLoaded", function() {
-    ladeFragen(); // Ruft die Funktion zum Laden der Fragen auf
-});
+const antwortKategorien = [
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    // Füge hier die Kategorien für alle Fragen hinzu
+];
 
-// Fragen in die Seite einfügen
+
+document.addEventListener("DOMContentLoaded", ladeFragen);
+document.getElementById("auswerten-btn").addEventListener("click", auswerten);
+
 function ladeFragen() {
     const fragenContainer = document.getElementById("fragen-container");
     fragenContainer.innerHTML = ""; // Sicherstellen, dass der Container leer ist
@@ -83,21 +88,6 @@ function ladeFragen() {
         fragenContainer.innerHTML += frageHTML;
     });
 }
-
-// Beim Laden der Seite die Fragen einfügen
-window.onload = ladeFragen;
-
-// Klick-Event für die Auswertung
-document.getElementById("auswerten-btn").addEventListener("click", function () {
-    const antworten = [];
-    fragen.forEach((_, index) => {
-        const ausgewählt = document.querySelector(`input[name="frage${index}"]:checked`);
-        antworten.push(ausgewählt ? parseInt(ausgewählt.value) : 0);
-    });
-
-    const ergebnis = berechneErgebnis(antworten);
-    zeigeErgebnis(ergebnis);
-});
 
 function auswerten() {
     const ergebnisse = {};
@@ -131,11 +121,55 @@ function auswerten() {
         ergebnisDiv.innerHTML += `<p>${partei}: ${ergebnisse[partei]}</p>`;
     }
 
-    // Diagramm erstellen (wie zuvor)
+    // Diagramm erstellen
+    erstelleDiagramm(ergebnisse);
 
     // Kategorien in das Ergebnis-Div einfügen
     ergebnisDiv.innerHTML += "<h3>Kategorien:</h3>";
     for (const kategorie in kategorienErgebnis) {
         ergebnisDiv.innerHTML += `<p>${kategorie}: ${kategorienErgebnis[kategorie]}</p>`;
     }
+}
+
+function erstelleDiagramm(ergebnisse) {
+    const ctx = document.getElementById("ergebnisDiagramm").getContext("2d");
+    const parteienNamen = Object.keys(ergebnisse);
+    const punkte = parteienNamen.map(partei => ergebnisse[partei]);
+
+    const diagramm = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: parteienNamen,
+            datasets: [{
+                label: 'Punkte',
+                data: punkte,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    // Weitere Farben hinzufügen für weitere Parteien
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    // Weitere Farben hinzufügen für weitere Parteien
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
 }
