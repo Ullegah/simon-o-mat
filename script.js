@@ -1,4 +1,4 @@
-  "Soll der Mindestlohn erhöht werden?",
+   "Soll der Mindestlohn erhöht werden?",
     "Soll Cannabis legalisiert werden?",
     "Soll Deutschland aus der EU austreten?",
      "Soll der Mindestlohn erhöht werden?",
