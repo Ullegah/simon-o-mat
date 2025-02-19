@@ -1,15 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
 }
 
 h1 {
-    text-align: center;
+    color: #333;
 }
 
 .question {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
