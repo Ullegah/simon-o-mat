@@ -4,35 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wahl-O-Mat</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* Füge hier ein bisschen CSS hinzu, um die Tabellen schöner zu gestalten */
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 10px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .diagramm {
-            width: 100%;
-            height: 400px;
-        }
+        body { font-family: Arial, sans-serif; }
+        .frage { margin-bottom: 10px; }
+        .ergebnis { margin-top: 20px; }
+        canvas { max-width: 400px; }
     </style>
 </head>
 <body>
-    <form id="wahlomat-form">
-        <div id="fragen-container"></div>
-        <button type="button" id="auswerten-btn">Auswerten</button>
-    </form>
-    <div id="ergebnis"></div>
-    <canvas id="diagramm" class="diagramm"></canvas>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    <h1>Wahl-O-Mat</h1>
+    <div id="fragenContainer"></div>
+    <button onclick="berechneErgebnis()">Ergebnis anzeigen</button>
+    <div class="ergebnis">
+        <h2>Ergebnis</h2>
+        <table id="ergebnisTabelle" border="1"></table>
+        <canvas id="ergebnisChart"></canvas>
+    </div>
+    
