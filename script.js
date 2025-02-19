@@ -65,6 +65,54 @@ const parteien = {
 const antwortKategorien = [
     ["Links", "Mitte", "Rechts"], // Frage 1
     ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+        ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+        ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+        ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+        ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
+    ["Links", "Mitte", "Rechts"], // Frage 1
+    ["Rechts", "Mitte", "Links"], // Frage 2
     // Füge hier die Kategorien für alle Fragen hinzu
 ];
 
