@@ -165,55 +165,20 @@ function auswerten() {
     // Ergebnisse in das Ergebnis-Div einfügen
     const ergebnisDiv = document.getElementById("ergebnis");
     ergebnisDiv.innerHTML = "<h2>Ergebnisse:</h2>";
+    ergebnisDiv.innerHTML += "<table><tr><th>Partei</th><th>Punkte</th></tr>";
     for (const partei in ergebnisse) {
-        ergebnisDiv.innerHTML += `<p>${partei}: ${ergebnisse[partei]}</p>`;
+        ergebnisDiv.innerHTML += `<tr><td>${partei}</td><td>${ergebnisse[partei]}</td></tr>`;
     }
-
-    // Diagramm erstellen
-    erstelleDiagramm(ergebnisse);
+    ergebnisDiv.innerHTML += "</table>";
 
     // Kategorien in das Ergebnis-Div einfügen
     ergebnisDiv.innerHTML += "<h3>Kategorien:</h3>";
+    ergebnisDiv.innerHTML += "<table><tr><th>Kategorie</th><th>Anzahl</th></tr>";
     for (const kategorie in kategorienErgebnis) {
-        ergebnisDiv.innerHTML += `<p>${kategorie}: ${kategorienErgebnis[kategorie]}</p>`;
+        ergebnisDiv.innerHTML += `<tr><td>${kategorie}</td><td>${kategorienErgebnis[kategorie]}</td></tr>`;
     }
-}
+    ergebnisDiv.innerHTML += "</table>";
 
-function erstelleDiagramm(ergebnisse) {
-    const ctx = document.getElementById("ergebnisDiagramm").getContext("2d");
-    const parteienNamen = Object.keys(ergebnisse);
-    const punkte = parteienNamen.map(partei => ergebnisse[partei]);
-
-    const farben = {
-        "CDU/CSU": 'rgba(0, 0, 0, 0.5)', // schwarz
-        "SPD": 'rgba(255, 0, 0, 0.5)', // rot
-        "Grüne": 'rgba(0, 128, 0, 0.5)', // grün
-        "FDP": 'rgba(255, 255, 0, 0.5)', // gelb
-        "AfD": 'rgba(0, 0, 255, 0.5)', // blau
-        "Die Linke": 'rgba(139, 0, 0, 0.5)', // dunkleres rot
-    };
-
-    const diagramm = new Chart(ctx, {
-        type: 'pie', // Kuchendiagramm
-        data: {
-            labels: parteienNamen,
-            datasets: [{
-                label: 'Punkte',
-                data: punkte,
-                backgroundColor: parteienNamen.map(partei => farben[partei]),
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                },
-                title: {
-                    display: true,
-                    text: 'Ergebnisse',
-                }
-            }
-        }
-    });
+    // Diagramm erstellen
+    erstelleDiagramm(ergebnisse);
 }
