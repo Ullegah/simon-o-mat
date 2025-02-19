@@ -105,5 +105,5 @@ function displayResults(results, directionCounts) {
     resultDiv.innerHTML += `</ul><p>Fragen mit rechts: ${directionCounts.rechts}</p><p>Fragen mit links: ${directionCounts.links}</p>`;
 }
 
-// Fragen laden, wenn die Seite geladen wird
+// Aufruf der loadQuestions-Funktion beim Laden der Seite
 window.onload = loadQuestions;
