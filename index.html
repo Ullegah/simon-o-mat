@@ -3,25 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Wahl-O-Mat</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .question {
-            margin: 10px 0;
-        }
-        .result {
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
-    <h1>Wahl-O-Mat</h1>
-    <div id="fragenContainer"></div>
-    <button id="nextButton" onclick="nextQuestion()">Nächste Frage</button>
-    <div class="result" id="resultContainer"></div>
-
-    <script src="script.js"></script> <!-- Verlinkung zur externen JavaScript-Datei -->
+    <div class="container">
+        <h1>Wahl-O-Mat</h1>
+        <form id="wahlomat-form">
+            <div id="fragen-container"></div>
+            <button type="button" id="auswerten-btn">Auswerten</button>
+        </form>
+        <div id="ergebnis"></div>
+        <canvas id="diagramm" width="400" height="200"></canvas>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
