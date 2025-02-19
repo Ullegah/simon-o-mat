@@ -53,163 +53,60 @@ const fragen = [
 ];
 
 // Parteien mit ihren Positionen zu den Fragen
-const parteien = {
-    "CDU/CSU":  [1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1],
-    "SPD":  [0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1],
-    "Grüne":  [-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0],
-    "FDP":  [-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0],
-    "AfD":  [-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0],
-    "Die Linke":  [-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0]
-};
-
-const antwortKategorien = [
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-        ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-        ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-        ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-        ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    // Füge hier die Kategorien für alle Fragen hinzu
-];
-
-
-document.addEventListener("DOMContentLoaded", ladeFragen);
-document.getElementById("auswerten-btn").addEventListener("click", auswerten);
-
-function ladeFragen() {
-    const fragenContainer = document.getElementById("fragen-container");
-    fragenContainer.innerHTML = ""; // Sicherstellen, dass der Container leer ist
-
-    fragen.forEach((frage, index) => {
-        const frageHTML = `
-            <div class="frage">
-                <p><strong>Frage ${index + 1}:</strong> ${frage}</p>
-                <label><input type="radio" name="frage${index}" value="1"> Ja</label>
-                <label><input type="radio" name="frage${index}" value="0"> Neutral</label>
-                <label><input type="radio" name="frage${index}" value="-1"> Nein</label>
-            </div>
-        `;
-        fragenContainer.innerHTML += frageHTML;
-    });
-}
-
-function auswerten() {
-    const ergebnisse = {};
-    const wahlomatForm = document.getElementById("wahlomat-form");
-    const kategorienErgebnis = {};
-
-    // Durch alle Fragen iterieren
-    fragen.forEach((frage, index) => {
-        const antwort = wahlomatForm[`frage${index}`]?.value; // Verwende optionales chaining
-        if (antwort !== undefined) {
-            for (const partei in parteien) {
-                if (!ergebnisse[partei]) {
-                    ergebnisse[partei] = 0;
-                }
-                ergebnisse[partei] += parteien[partei][index] * parseInt(antwort);
-            }
-
-            // Bestimme die politische Ausrichtung der gewählten Antwort
-            const kategorie = antwortKategorien[index][parseInt(antwort) + 1]; // +1 wegen der Indexierung
-            if (!kategorienErgebnis[kategorie]) {
-                kategorienErgebnis[kategorie] = 0;
-            }
-            kategorienErgebnis[kategorie] += 1; // Zähle die Anzahl der Antworten pro Kategorie
+ const parteien = {
+            "CDU/CSU":  [1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1],
+            "SPD":  [0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1],
+            "Grüne":  Array(50).fill([-1, -1, 1, 0, 0]).flat(),
+            "FDP":  Array(50).fill([-1, -1, 1, 0, 0]).flat(),
+            "AfD":  Array(50).fill([-1, -1, 1, 0, 0]).flat(),
+            "Die Linke":  Array(50).fill([-1, -1, 1, 0, 0]).flat()
+        };
+        
+        const antwortKategorien = Array(50).fill(["Links", "Mitte", "Rechts"]);
+        
+        const questionsDiv = document.getElementById("questions");
+        for (let i = 0; i < 50; i++) {
+            let questionDiv = document.createElement("div");
+            questionDiv.classList.add("question");
+            questionDiv.innerHTML = `
+                <p>Frage ${i + 1}</p>
+                <input type="radio" name="question${i}" value="-1"> ${antwortKategorien[i][0]}
+                <input type="radio" name="question${i}" value="0"> ${antwortKategorien[i][1]}
+                <input type="radio" name="question${i}" value="1"> ${antwortKategorien[i][2]}
+            `;
+            questionsDiv.appendChild(questionDiv);
         }
-    });
-
-    // Ergebnisse in das Ergebnis-Div einfügen
-    const ergebnisDiv = document.getElementById("ergebnis");
-    ergebnisDiv.innerHTML = "<h2>Ergebnisse:</h2>";
-    ergebnisDiv.innerHTML += "<table><tr><th>Partei</th><th>Punkte</th></tr>";
-
-    // Ergebnisse nach Punkten sortieren
-    const ergebnisseSortiert = Object.entries(ergebnisse).sort((a, b) => b[1] - a[1]);
-    
-    for (const [partei, punkte] of ergebnisseSortiert) {
-        ergebnisDiv.innerHTML += `<tr><td>${partei}</td><td>${punkte}</td></tr>`;
-    }
-    ergebnisDiv.innerHTML += "</table>";
-
-    // Kategorien in das Ergebnis-Div einfügen
-    ergebnisDiv.innerHTML += "<h3>Kategorien:</h3>";
-    ergebnisDiv.innerHTML += "<table><tr><th>Kategorie</th><th>Anzahl</th></tr>";
-    for (const kategorie in kategorienErgebnis) {
-        ergebnisDiv.innerHTML += `<tr><td>${kategorie}</td><td>${kategorienErgebnis[kategorie]}</td></tr>`;
-    }
-    ergebnisDiv.innerHTML += "</table>";
-
-    // Diagramm erstellen
-    erstelleDiagramm(ergebnisseSortiert);
-}
-
-function erstelleDiagramm(ergebnisse) {
-    const ctx = document.getElementById('diagramm').getContext('2d');
-    const parteien = ergebnisse.map(item => item[0]);
-    const punkte = ergebnisse.map(item => item[1]);
-
-    const diagramm = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: parteien,
-            datasets: [{
-                label: 'Punkte',
-                data: punkte,
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+        
+        function calculateResults() {
+            let scores = {};
+            Object.keys(parteien).forEach(p => scores[p] = 0);
+            
+            for (let i = 0; i < 50; i++) {
+                let selected = document.querySelector(`input[name=question${i}]:checked`);
+                if (selected) {
+                    let value = parseInt(selected.value);
+                    Object.keys(parteien).forEach(p => {
+                        scores[p] += (parteien[p][i] || 0) * value;
+                    });
                 }
             }
+            
+            let resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = "<h2>Ergebnisse</h2>" + Object.entries(scores).map(([p, s]) => `<p>${p}: ${s}</p>`).join("");
+            
+            let ctx = document.getElementById("resultsChart").getContext("2d");
+            new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: Object.keys(scores),
+                    datasets: [{
+                        label: "Punkte",
+                        data: Object.values(scores),
+                        backgroundColor: ["blue", "red", "green", "yellow", "darkblue", "purple"]
+                    }]
+                }
+            });
         }
-    });
-}
+    </script>
+</body>
+</html>
