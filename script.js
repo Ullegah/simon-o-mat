@@ -1,278 +1,97 @@
-   "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-     "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-    "Soll Deutschland aus der EU austreten?",
-     "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-        "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-     "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-    "Soll Deutschland aus der EU austreten?",
-     "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-        "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-     "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-    "Soll Deutschland aus der EU austreten?",
-     "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-        "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-     "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-    "Soll Deutschland aus der EU austreten?",
-     "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-        "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-     "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-    "Soll Deutschland aus der EU austreten?",
-     "Soll der Mindestlohn erhöht werden?",
-    "Soll Cannabis legalisiert werden?",
-    "Soll Deutschland aus der EU austreten?",
-    // ... bis zu 50 Fragen
-];
+ const fragen = [
+            { text: "Sollten die Steuern erhöht werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
+            { text: "Soll die Bundeswehr ausgebaut werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Rechts", "Mitte", "Links"] },
+            { text: "Soll der Mindestlohn erhöht werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
+            { text: "Soll das Grundeinkommen eingeführt werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
+            { text: "Soll die Förderung erneuerbarer Energien steigen?", antworten: ["Ja", "Neutral", "Nein"], position: ["Mitte", "Links", "Rechts"] },
+            { text: "Soll die EU stärker kontrolliert werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Rechts", "Mitte", "Links"] },
+            { text: "Soll der Verkehr auf öffentliche Verkehrsmittel umgestellt werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
+            { text: "Soll die Atomkraft abgeschafft werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Mitte", "Rechts", "Links"] },
+            { text: "Soll die Schuldenbremse bestehen bleiben?", antworten: ["Ja", "Neutral", "Nein"], position: ["Rechts", "Mitte", "Links"] },
+            { text: "Soll der Zugang zu Gesundheitsdiensten verbessert werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
+            { text: "Soll das Bildungssystem reformiert werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Mitte", "Links", "Rechts"] },
+            { text: "Soll die Einwanderung kontrolliert werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Rechts", "Mitte", "Links"] },
+            { text: "Soll der Kohleausstieg beschleunigt werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
+            { text: "Soll das Bargeld abgeschafft werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Mitte", "Rechts", "Links"] },
+            { text: "Soll die Rente steigen?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
+            { text: "Soll das Verbot von Tierversuchen beibehalten werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
+            { text: "Soll die Digitalisierung in Schulen gefördert werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Mitte", "Links", "Rechts"] },
+            { text: "Soll die Überwachung durch den Staat zunehmen?", antworten: ["Ja", "Neutral", "Nein"], position: ["Rechts", "Mitte", "Links"] },
+            { text: "Soll der Mindestabstand zu Windkraftanlagen erhöht werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Rechts", "Mitte", "Links"] },
+            { text: "Soll die Lobbyarbeit transparenter werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Mitte", "Links", "Rechts"] },
+            { text: "Soll die Landwirtschaft umweltfreundlicher werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
+            { text: "Soll der Wehrdienst wieder eingeführt werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Rechts", "Mitte", "Links"] },
+            { text: "Soll der öffentlich-rechtliche Rundfunk reformiert werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Mitte", "Links", "Rechts"] },
+            { text: "Soll die Gendergerechtigkeit gefördert werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
+            { text: "Soll die EU-Armee eingeführt werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Rechts", "Mitte", "Links"] },
+            { text: "Soll die Unterstützung für Familien erhöht werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Mitte", "Links", "Rechts"] },
+            { text: "Soll der Zugang zu Bildung kostenlos sein?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
+            { text: "Soll die Verbreitung von Fake News stärker bestraft werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Mitte", "Links", "Rechts"] },
+            { text: "Soll der Verkehr auf Elektromobilität umgestellt werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
+            { text: "Soll die Altersvorsorge reformiert werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Mitte", "Links", "Rechts"] },
+            { text: "Soll die Schulpflicht abgeschafft werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Rechts", "Mitte", "Links"] },
+            { text: "Soll die Drogenpolitik liberalisiert werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Links", "Mitte", "Rechts"] },
+            { text: "Soll die Digitalisierung der Verwaltung vorangetrieben werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Mitte", "Links", "Rechts"] },
+            { text: "Soll der Einzelhandel am Sonntag geöffnet sein?", antworten: ["Ja", "Neutral", "Nein"], position: ["Rechts", "Mitte", "Links"] },
+            { text: "Soll die Förderung von Start-ups erhöht werden?", antworten: ["Ja", "Neutral", "Nein"], position: ["Mitte", "Links", "Rechts"] }
+        ];
 
-// Parteien mit ihren Positionen zu den Fragen
-const parteien = {
-    "CDU/CSU":  [1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1,1, 0, -1, 1, 1],
-    "SPD":  [0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1,0, 1, -1, -1, 1],
-    "Grüne":  [-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0],
-    "FDP":  [-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0],
-    "AfD":  [-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0],
-    "Die Linke":  [-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0,-1, -1, 1, 0, 0]
-};
+        const parteien = {
+            "CDU/CSU": [0, 1, 0, 1, 0, 1, -1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, -1, 0, 0, 1, 1, 0, 1, 1],
+            "SPD": [1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1],
+            "Grüne": [1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1],
+            "FDP": [0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0],
+            "AfD": [-1, 1, -1, 0, 0, 1, 1, -1, 1, 1, 0, -1, 1, -1, 0, 0, 0, 1, 1, -1, 1, 1, 1, 1, 0, 0, 1, 1, -1, -1],
+            "Die Linke": [1, -1, 1, 1, 1, -1, 1, 1, -1, 0, 1, -1, 1, 1, 1, -1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0],
+        };
 
-const antwortKategorien = [
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-        ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-        ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-        ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-        ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    ["Links", "Mitte", "Rechts"], // Frage 1
-    ["Rechts", "Mitte", "Links"], // Frage 2
-    // Füge hier die Kategorien für alle Fragen hinzu
-];
+        const fragenContainer = document.getElementById('fragenContainer');
+        let currentQuestionIndex = 0;
 
+        function displayQuestion() {
+            const frage = fragen[currentQuestionIndex];
+            fragenContainer.innerHTML = `
+                <div class="question">
+                    <h2>Frage ${currentQuestionIndex + 1}: ${frage.text}</h2>
+                    ${frage.antworten.map((antwort, index) => `
+                        <input type="radio" name="antwort" value="${index}"> ${antwort}
+                    `).join('<br>')}
+                </div>
+            `;
+        }
 
-document.addEventListener("DOMContentLoaded", ladeFragen);
-document.getElementById("auswerten-btn").addEventListener("click", auswerten);
-
-function ladeFragen() {
-    const fragenContainer = document.getElementById("fragen-container");
-    fragenContainer.innerHTML = ""; // Sicherstellen, dass der Container leer ist
-
-    fragen.forEach((frage, index) => {
-        const frageHTML = 
-            <div class="frage">
-                <p><strong>Frage ${index + 1}:</strong> ${frage}</p>
-                <label><input type="radio" name="frage${index}" value="1"> Ja</label>
-                <label><input type="radio" name="frage${index}" value="0"> Neutral</label>
-                <label><input type="radio" name="frage${index}" value="-1"> Nein</label>
-            </div>
-        ;
-        fragenContainer.innerHTML += frageHTML;
-    });
-}
-
-function auswerten() {
-    const ergebnisse = {};
-    const wahlomatForm = document.getElementById("wahlomat-form");
-    const kategorienErgebnis = {};
-
-    // Durch alle Fragen iterieren
-    fragen.forEach((frage, index) => {
-        const antwort = wahlomatForm[frage${index}]?.value; // Verwende optionales chaining
-        if (antwort !== undefined) {
+        function calculateResults() {
+            const results = {};
             for (const partei in parteien) {
-                if (!ergebnisse[partei]) {
-                    ergebnisse[partei] = 0;
-                }
-                ergebnisse[partei] += parteien[partei][index] * parseInt(antwort);
+                results[partei] = 0;
             }
 
-            // Bestimme die politische Ausrichtung der gewählten Antwort
-            const kategorie = antwortKategorien[index][parseInt(antwort) + 1]; // +1 wegen der Indexierung
-            if (!kategorienErgebnis[kategorie]) {
-                kategorienErgebnis[kategorie] = 0;
-            }
-            kategorienErgebnis[kategorie] += 1; // Zähle die Anzahl der Antworten pro Kategorie
-        }
-    });
-
-    // Ergebnisse in das Ergebnis-Div einfügen
-    const ergebnisDiv = document.getElementById("ergebnis");
-    ergebnisDiv.innerHTML = "<h2>Ergebnisse:</h2>";
-    for (const partei in ergebnisse) {
-        ergebnisDiv.innerHTML += <p>${partei}: ${ergebnisse[partei]}</p>;
-    }
-
-    // Diagramm erstellen
-    erstelleDiagramm(ergebnisse);
-
-    // Kategorien in das Ergebnis-Div einfügen
-    ergebnisDiv.innerHTML += "<h3>Kategorien:</h3>";
-    for (const kategorie in kategorienErgebnis) {
-        ergebnisDiv.innerHTML += <p>${kategorie}: ${kategorienErgebnis[kategorie]}</p>;
-    }
-}
-
-function erstelleDiagramm(ergebnisse) {
-    const ctx = document.getElementById("ergebnisDiagramm").getContext("2d");
-    const parteienNamen = Object.keys(ergebnisse);
-    const punkte = parteienNamen.map(partei => ergebnisse[partei]);
-
-    const farben = {
-        "CDU/CSU": 'rgba(0, 0, 0, 0.5)', // schwarz
-        "SPD": 'rgba(255, 0, 0, 0.5)', // rot
-        "Grüne": 'rgba(0, 128, 0, 0.5)', // grün
-        "FDP": 'rgba(255, 255, 0, 0.5)', // gelb
-        "AfD": 'rgba(0, 0, 255, 0.5)', // blau
-        "Die Linke": 'rgba(139, 0, 0, 0.5)', // dunkleres rot
-    };
-
-    const diagramm = new Chart(ctx, {
-        type: 'pie', // Kuchendiagramm
-        data: {
-            labels: parteienNamen,
-            datasets: [{
-                label: 'Punkte',
-                data: punkte,
-                backgroundColor: parteienNamen.map(partei => farben[partei]),
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                },
-                title: {
-                    display: true,
-                    text: 'Ergebnisse',
+            const selectedValue = document.querySelector('input[name="antwort"]:checked');
+            if (selectedValue) {
+                const value = parseInt(selectedValue.value);
+                for (const partei in parteien) {
+                    results[partei] += parteien[partei][currentQuestionIndex] * (value === 0 ? 1 : value === 1 ? 0 : -1);
                 }
             }
-        }
-    });
-}
-    const diagramm = new Chart(ctx, {
-        type: 'pie', // Kuchendiagramm
-        data: {
-            labels: parteienNamen,
-            datasets: [{
-                label: 'Punkte',
-                data: punkte,
-                backgroundColor: parteienNamen.map(partei => farben[partei]),
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                },
-                title: {
-                    display: true,
-                    text: 'Ergebnisse',
-                }
-            }
-        }
-    });
-}
 
-    const diagramm = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: parteienNamen,
-            datasets: [{
-                label: 'Punkte',
-                data: punkte,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < fragen.length) {
+                displayQuestion();
+            } else {
+                displayFinalResults(results);
             }
         }
-    });
-}
+
+        function displayFinalResults(results) {
+            const resultContainer = document.getElementById('resultContainer');
+            resultContainer.innerHTML = '<h2>Ergebnisse:</h2>';
+            for (const partei in results) {
+                resultContainer.innerHTML += `<p>${partei}: ${results[partei]}</p>`;
+            }
+        }
+
+        displayQuestion();
+    </script>
+</body>
+</html>
