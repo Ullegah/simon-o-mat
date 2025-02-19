@@ -7,18 +7,13 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body { font-family: Arial, sans-serif; }
-        .frage { margin-bottom: 10px; }
-        .ergebnis { margin-top: 20px; }
-        canvas { max-width: 400px; }
+        .question { margin-bottom: 10px; }
+        .result { margin-top: 20px; }
     </style>
 </head>
 <body>
     <h1>Wahl-O-Mat</h1>
-    <div id="fragenContainer"></div>
-    <button onclick="berechneErgebnis()">Ergebnis anzeigen</button>
-    <div class="ergebnis">
-        <h2>Ergebnis</h2>
-        <table id="ergebnisTabelle" border="1"></table>
-        <canvas id="ergebnisChart"></canvas>
-    </div>
-    
+    <div id="questions"></div>
+    <button onclick="calculateResults()">Auswerten</button>
+    <div id="results" class="result"></div>
+    <canvas id="resultChart"></canvas>
