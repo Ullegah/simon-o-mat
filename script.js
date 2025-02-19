@@ -184,36 +184,34 @@ function erstelleDiagramm(ergebnisse) {
     const parteienNamen = Object.keys(ergebnisse);
     const punkte = parteienNamen.map(partei => ergebnisse[partei]);
 
+    const farben = {
+        "CDU/CSU": 'rgba(0, 0, 0, 0.5)', // schwarz
+        "SPD": 'rgba(255, 0, 0, 0.5)', // rot
+        "Grüne": 'rgba(0, 128, 0, 0.5)', // grün
+        "FDP": 'rgba(255, 255, 0, 0.5)', // gelb
+        "AfD": 'rgba(0, 0, 255, 0.5)', // blau
+        "Die Linke": 'rgba(139, 0, 0, 0.5)', // dunkleres rot
+    };
+
     const diagramm = new Chart(ctx, {
-        type: 'bar',
+        type: 'pie', // Kuchendiagramm
         data: {
             labels: parteienNamen,
             datasets: [{
                 label: 'Punkte',
                 data: punkte,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                ],
-                borderWidth: 1
+                backgroundColor: parteienNamen.map(partei => farben[partei]),
             }]
         },
         options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Ergebnisse',
                 }
             }
         }
