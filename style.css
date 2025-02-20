@@ -53,4 +53,9 @@ button:hover {
 p {
     margin: 5px 0;
 }
+button.selected {
+    background-color: #4CAF50; /* Grüne Farbe für ausgewählte Buttons */
+    color: white; /* Weiße Schriftfarbe */
+    border: 2px solid #388E3C; /* Dunkelgrüne Umrandung */
+}
 
