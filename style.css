@@ -15,8 +15,8 @@ h3 {
 }
 
 button {
-    background-color: #008CBA; /* Blaue Farbe für die Buttons */
-    color: white; /* Weiße Schriftfarbe */
+    background-color: #d3d3d3; /* Graue Farbe für die Buttons */
+    color: black; /* Schwarze Schriftfarbe */
     border: none; /* Keine Umrandung */
     padding: 10px 20px; /* Innenabstand */
     margin: 5px; /* Abstand zwischen den Buttons */
@@ -27,13 +27,17 @@ button {
 }
 
 button:hover {
-    background-color: #005f73; /* Dunklere Farbe bei Hover */
+    background-color: #a9a9a9; /* Dunklere Graufarbe bei Hover */
 }
 
 button.selected {
     background-color: #4CAF50; /* Grüne Farbe für ausgewählte Buttons */
     color: white; /* Weiße Schriftfarbe */
     border: 2px solid #388E3C; /* Dunkelgrüne Umrandung */
+}
+
+button.not-selected {
+    background-color: #d3d3d3; /* Graue Farbe für nicht ausgewählte Buttons */
 }
 
 #results-container {
