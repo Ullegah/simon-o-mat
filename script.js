@@ -42,6 +42,7 @@ function selectAnswer(questionIndex, points, selectedButton) {
     const buttons = document.querySelectorAll(`#questions-container div:nth-child(${questionIndex + 1}) button`);
     buttons.forEach(button => {
         button.classList.remove('selected');
+        button.classList.add('not-selected'); // Hinzufügen der Klasse für nicht ausgewählte Buttons
     });
 
     // Setze die aktuelle Auswahl
