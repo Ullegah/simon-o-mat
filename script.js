@@ -8,7 +8,7 @@ const questions = [
         ]
     },
 {
-        question: "Sollten Steuern für hohe Einkommen erhöht werden?",
+        question: "Sollten Steuern für hohe Einkommen DEUTLICH erhöht werden?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
