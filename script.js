@@ -310,25 +310,25 @@ const questions = [
  {
         question: "Soll der Staat stärker in Zukunftstechnologien wie Künstliche Intelligenz investieren?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: 0, Linke: 0 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 0, Linke: 0 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: -1, AfD: 1, Linke: 1 } }
         ]
     },
 {
         question: "Soll das Renteneintrittsalter an die steigende Lebenserwartung angepasst werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 0, Grüne: 1, FDP: -1, AfD: -1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: 0, Grüne: -1, FDP: 1, AfD: 1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 1, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
     
     {
         question: "Soll das deutsche Gesundheitssystem stärker auf private Anbieter setzen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: -1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: 1, Linke: 1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
@@ -336,59 +336,59 @@ const questions = [
 {
         question: "Soll es eine bundesweite Deckelung der Mietpreise in Großstädten geben?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 0, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: 0, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 1, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: -1 } }
         ]
     },
 {
         question: "Soll die Regierung mehr in Programme investieren, die Obdachlosigkeit verhindern und Betroffenen helfen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 0, AfD: 0, Linke: 1 } },
+            { text: "Nein", points: { CDU: 0, SPD: -1, Grüne: -1, FDP: 0, AfD: 0, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } }
         ]
     },
     
  {
         question: "Soll der Staat Familien mit Kindern stärker finanziell entlasten?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
 {
         question: "Soll das Bildungssystem stärker vereinheitlicht werden, indem ein bundesweites Zentralabitur eingeführt wird?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 0, SPD: 1, Grüne: 1, FDP: 0, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: 0, SPD: -1, Grüne: -1, FDP: 0, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 1, SPD: 0, Grüne: 0, FDP: 1, AfD: 0, Linke: 0 } }
         ]
     },
     
     {
         question: "Sollen mehr Mittel für die Modernisierung von Schulen bereitgestellt werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: 1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: -1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: -1, Grüne: -1, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
 
  {
         question: "Soll das Medizinstudium stärker auf praktische Erfahrung ausgerichtet werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: 1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: -1, Linke: -1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
 {
         question: "Soll die Pflegeversicherung reformiert werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: 1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: -1, Linke: -1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
@@ -396,138 +396,138 @@ const questions = [
  {
         question: "Soll der Staat stärker in die Wohnungswirtschaft eingreifen, um bezahlbaren Wohnraum zu sichern?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 0, SPD: 1, Grüne: 1, FDP: 0, AfD: 1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: 0, AfD: -1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 1, AfD: 0, Linke: -1 } }
         ]
     },
 {
         question: "Soll es mehr finanzielle Anreize für Lehrer in strukturschwachen Regionen geben?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: -1 } }
         ]
     },
     
     {
         question: "Soll der Rechtsanspruch auf einen Kitaplatz ab Geburt gelten?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 0, SPD: 1, Grüne: 1, FDP: 0, AfD: 1, Linke: 1 } },
+            { text: "Nein", points: { CDU: 0, SPD: -1, Grüne: -1, FDP: 0, AfD: -1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 1, SPD: 0, Grüne: -1, FDP: 1, AfD: 0, Linke: -1 } }
         ]
     },
 
 {
         question: "Soll Deutschland die Zahl der aufgenommenen Flüchtlinge begrenzen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 0, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: 0, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 1, Grüne: 0, FDP: 0, AfD: -1, Linke: 0 } }
         ]
     },
 {
         question: "Soll der Familiennachzug für Geflüchtete erleichtert werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: -1, Grüne: -1, FDP: 0, AfD: 0, Linke: -1 } }
         ]
     },
     
  {
         question: "Soll es ein Punktesystem nach kanadischem Vorbild für Fachkräfte-Einwanderung geben?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: -1, AfD: 0, Linke: 0 } }
         ]
     },
 {
         question: "Soll der Zugang zur deutschen Staatsbürgerschaft erleichtert werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 0, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: 0, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 1, SPD: 0, Grüne: -1, FDP: -1, AfD: -1, Linke: -1 } }
         ]
     },
     
     {
         question: "Soll die Abschiebepraxis für abgelehnte Asylbewerber verschärft werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 0, Grüne: -1, FDP: 0, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: 0, Grüne: 1, FDP: 0, AfD: -1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 1, Grüne: 0, FDP: 1, AfD: -1, Linke: 0 } }
         ]
     },
 
      {
         question: "Soll die Integrationsförderung vom Staat stärker finanziert werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: 0, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 0, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 1, Linke: -1 } }
         ]
     },
 {
         question: "Sollen Asylanten abgeschoben werden wenn der Fluchtgrund erlischt?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 0, Grüne: -1, FDP: 0, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: 0, Grüne: 1, FDP: 0, AfD: -1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 1, Grüne: -1, FDP: 1, AfD: -1, Linke: 0 } }
         ]
     },
     
  {
         question: "Soll das Recht auf Asyl in Deutschland abgeschafft und durch ein Kontingentsystem ersetzt werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 0, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: 0, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 1, SPD: 0, Grüne: -1, FDP: 0, AfD: -1, Linke: -1 } }
         ]
     },
 {
         question: "Soll Deutschland mehr legale Einwanderungsmöglichkeiten für Arbeitskräfte schaffen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: -1, FDP: -1, AfD: -1, Linke: 0 } }
         ]
     },
     
     {
         question: "Soll es eine verpflichtende Integrationsprüfung für Einwanderer geben?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 0, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: 0, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 1, Grüne: 0, FDP: 0, AfD: -1, Linke: 0 } }
         ]
     },
 
 {
         question: "Sollen Kinder von Migranten bei Geburt in Deutschland automatisch einen deutschen Pass erhalten?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 0, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: 0, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 1, SPD: 0, Grüne: -1, FDP: 0, AfD: -1, Linke: -1 } }
         ]
     },
 {
         question: "Soll Deutschland eine Bezahlkarte für Asylbewerber einführen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: -1, FDP: 0, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: 1, FDP: 0, AfD: -1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 1, AfD: -1, Linke: -1 } }
         ]
     },
     
  {
         question: "Soll der Ausbau erneuerbarer Energien staatlich stärker gefördert werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: -1, FDP: 0, AfD: 0, Linke: -1 } }
         ]
     },
 {
@@ -535,42 +535,42 @@ const questions = [
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: -1, FDP: 0, AfD: -1, Linke: -1 } }
         ]
     },
     
     {
         question: "Soll der Kohleausstieg auf 2030 vorgezogen werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: 0, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 0, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: -1, FDP: 1, AfD: 0, Linke: 0 } }
         ]
     },
 
  {
         question: "Soll der Staat stärker in klimafreundliche Verkehrskonzepte wie den ÖPNV investieren?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: -1, Grüne: -1, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
 {
         question: "Soll die CO₂-Steuer weiter erhöht werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 0, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: 0, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 1, SPD: 0, Grüne: -1, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
     
  {
         question: "Soll Deutschland mehr in die Sanierung und den Ausbau der Straßen- und Schieneninfrastruktur investieren?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: 0, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 0, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: -1, FDP: 0, AfD: 1, Linke: 0 } }
         ]
     },
 {
@@ -578,51 +578,51 @@ const questions = [
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Enthaltung", points: { CDU: 0, SPD: -1, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
     
     {
         question: "Sollen E-Autos weiter gefördert werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: 0 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: 0, AfD: 1, Linke: 0 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: -1, FDP: 0, AfD: 0, Linke: 1 } }
         ]
     },
 
 {
         question: "Soll Deutschland mehr in Hochwasserschutz und Klimaanpassung investieren?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 0, SPD: 1, Grüne: 1, FDP: 0, AfD: 0, Linke: 1 } },
+            { text: "Nein", points: { CDU: 0, SPD: -1, Grüne: -1, FDP: 0, AfD: 0, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 1, SPD: 0, Grüne: -1, FDP: 1, AfD: 1, Linke: 0 } }
         ]
     },
 {
         question: "Soll der Staat den Verkauf von neuen Verbrennerautos bereits vor 2035 verbieten?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: 0, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 0, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: -1, FDP: 1, AfD: -1, Linke: 0 } }
         ]
     },
     
 {
         question: "Soll Deutschland den Ausbau von Atomkraft als Übergangslösung wieder in Betracht ziehen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 0, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: 0, AfD: -1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: -1, FDP: 1, AfD: 0, Linke: -1 } }
         ]
     },
     
     {
         question: "Soll es eine staatliche Abwrackprämie für alte Heizungen geben?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: 0, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 0, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 1, Linke: 0 } }
         ]
     },
   
