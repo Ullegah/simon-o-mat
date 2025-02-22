@@ -693,31 +693,32 @@ function displayQuestions() {
 let userAnswers = Array(questions.length).fill(null);
 
 function selectAnswer(questionIndex, points, selectedButton) {
-    // Suche ALLE Fragen, unabhängig von Blöcken
-    const allQuestionDivs = document.querySelectorAll("#questions-container h3");
+    // Finde ALLE Fragen in ALLEN Blöcken
+    const allQuestions = document.querySelectorAll("#questions-container div div h3");
 
-    // Richtiges Frage-Element finden
+    // Die Frage finden, die zur Auswahl gehört
     let questionDiv = null;
-    for (let i = 0; i < allQuestionDivs.length; i++) {
+    for (let i = 0; i < allQuestions.length; i++) {
         if (i === questionIndex) {
-            questionDiv = allQuestionDivs[i].parentElement;
+            questionDiv = allQuestions[i].parentElement;
             break;
         }
     }
 
     if (questionDiv) {
+        // Alle Buttons der aktuellen Frage selektieren
         const buttons = questionDiv.querySelectorAll("button");
 
-        // Entferne vorherige Auswahl in dieser Frage
+        // Entferne Auswahl von vorherigen Antworten
         buttons.forEach(button => {
             button.classList.remove("selected");
             button.classList.add("not-selected");
         });
 
-        // Speichere die Auswahl für diese Frage
+        // Speichere die Auswahl für die Frage
         userAnswers[questionIndex] = points;
 
-        // Markiere den geklickten Button als ausgewählt
+        // Markiere die gewählte Antwort als "selected"
         selectedButton.classList.add("selected");
         selectedButton.classList.remove("not-selected");
     } else {
