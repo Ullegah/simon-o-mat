@@ -693,18 +693,26 @@ function displayQuestions() {
 let userAnswers = Array(questions.length).fill(null);
 
 function selectAnswer(questionIndex, points, selectedButton) {
-    // Setze den vorherigen Button zurück
-    const buttons = document.querySelectorAll(`#questions-container div:nth-child(${questionIndex + 1}) button`);
+    // Hole alle Buttons der aktuellen Frage
+    const questionDivs = document.querySelectorAll("#questions-container > div");
+    
+    if (questionDivs[questionIndex]) {
+        const buttons = questionDivs[questionIndex].querySelectorAll("button");
 
-    buttons.forEach(button => {
-        button.classList.remove('selected');
-        button.classList.add('not-selected'); // Hinzufügen der Klasse für nicht ausgewählte Buttons
-    });
+        buttons.forEach(button => {
+            button.classList.remove("selected");
+            button.classList.add("not-selected"); // Nicht ausgewählte Buttons hervorheben
+        });
 
-    // Setze die aktuelle Auswahl
-    userAnswers[questionIndex] = points;
-    selectedButton.classList.add('selected');
+        // Setze die aktuelle Auswahl
+        userAnswers[questionIndex] = points;
+        selectedButton.classList.add("selected");
+        selectedButton.classList.remove("not-selected");
+    } else {
+        console.error(`Frage mit Index ${questionIndex} nicht gefunden.`);
+    }
 }
+
 
 document.getElementById('evaluate-button').onclick = () => evaluateResults();
 
