@@ -27,7 +27,7 @@ const questions = [
         ]
     },
 {
-        question: "Soll der Ausbau von Ganztagsschulen verpflichtend vorangetrieben werden?",
+        question: "Sollte der Bund den Kommunen mehr finanzielle Mittel zur Verfügung stellen, um lokale Projekte besser umsetzen zu können?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
