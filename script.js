@@ -645,32 +645,31 @@ questions.forEach((q, index) => {
 function displayUeberschrift() {
     const container = document.getElementById('questions-container');
     container.innerHTML = '';
-    
+
+    let globalIndex = 0;  // Richtiger Index über ALLE Fragen hinweg
+
     ueberschrift.forEach(group => {
         const groupDiv = document.createElement('div');
         groupDiv.innerHTML = `<h2>${group.title}</h2>`;
-        
-        group.questions.forEach((q, index) => {
+
+        group.questions.forEach(q => {
             const questionDiv = document.createElement('div');
-            questionDiv.innerHTML = `<h3>${index + 1}. ${q.question}</h3>`;
-            
+            questionDiv.innerHTML = `<h3>${globalIndex + 1}. ${q.question}</h3>`;
+
             q.answers.forEach(answer => {
                 const button = document.createElement('button');
                 button.textContent = answer.text;
-                button.onclick = () => selectAnswer(index, answer.points, button);
+                button.onclick = () => selectAnswer(globalIndex, answer.points, button);
                 questionDiv.appendChild(button);
             });
-            
+
             groupDiv.appendChild(questionDiv);
+            globalIndex++;  // Index für alle Fragen erhöhen
         });
-        
+
         container.appendChild(groupDiv);
     });
 }
-displayUeberschrift();
-
-
-
 
     
 // Funktion zum Anzeigen der Fragen
@@ -693,37 +692,21 @@ function displayQuestions() {
 let userAnswers = Array(questions.length).fill(null);
 
 function selectAnswer(questionIndex, points, selectedButton) {
-    // Finde ALLE Fragen in ALLEN Blöcken
-    const allQuestions = document.querySelectorAll("#questions-container div div h3");
+    // Alle Buttons im gesamten Container durchsuchen
+    const allButtons = document.querySelectorAll("#questions-container button");
 
-    // Die Frage finden, die zur Auswahl gehört
-    let questionDiv = null;
-    for (let i = 0; i < allQuestions.length; i++) {
-        if (i === questionIndex) {
-            questionDiv = allQuestions[i].parentElement;
-            break;
-        }
-    }
+    // Entferne vorherige Auswahl für alle Fragen
+    allButtons.forEach(button => {
+        button.classList.remove("selected");
+        button.classList.add("not-selected");
+    });
 
-    if (questionDiv) {
-        // Alle Buttons der aktuellen Frage selektieren
-        const buttons = questionDiv.querySelectorAll("button");
+    // Speichere die Auswahl für die aktuelle Frage
+    userAnswers[questionIndex] = points;
 
-        // Entferne Auswahl von vorherigen Antworten
-        buttons.forEach(button => {
-            button.classList.remove("selected");
-            button.classList.add("not-selected");
-        });
-
-        // Speichere die Auswahl für die Frage
-        userAnswers[questionIndex] = points;
-
-        // Markiere die gewählte Antwort als "selected"
-        selectedButton.classList.add("selected");
-        selectedButton.classList.remove("not-selected");
-    } else {
-        console.error(`Frage mit Index ${questionIndex} nicht gefunden.`);
-    }
+    // Markiere den ausgewählten Button
+    selectedButton.classList.add("selected");
+    selectedButton.classList.remove("not-selected");
 }
 
 
