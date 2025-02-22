@@ -696,7 +696,6 @@ let userAnswers = Array(questions.length).fill(null);
 function selectAnswer(questionIndex, points, selectedButton) {
     // Setze den vorherigen Button zurück
     const buttons = document.querySelectorAll(`#questions-container div:nth-child(${questionIndex + 1}) button`);
-
     buttons.forEach(button => {
         button.classList.remove('selected');
         button.classList.add('not-selected'); // Hinzufügen der Klasse für nicht ausgewählte Buttons
@@ -710,7 +709,7 @@ function selectAnswer(questionIndex, points, selectedButton) {
 document.getElementById('evaluate-button').onclick = () => evaluateResults();
 
 function evaluateResults() {
-    const results = { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0, BSW: 0 };
+    const results = { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 };
 
     userAnswers.forEach(answer => {
         if (answer) { // Nur Punkte addieren, wenn eine Antwort gewählt wurde
@@ -731,13 +730,12 @@ function evaluateResults() {
     updateChart(results);
 }
 
-
     const resultsContainer = document.getElementById('results-container');
     resultsContainer.innerHTML = '<h2>Ergebnisse</h2>';
     for (const party in results) {
         resultsContainer.innerHTML += `<p>${party}: ${results[party]} Punkte</p>`;
     }
-
+}
 
 
 let resultsChart;
@@ -782,4 +780,3 @@ function updateChart(results) {
 // Initialisiere das Fragen-Display
 
 displayUeberschrift();
-console.log("displayUeberschrift wird aufgerufen!");
