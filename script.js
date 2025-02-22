@@ -167,21 +167,14 @@ const questions = [
     },
 
 {
-        question: "Sollten Steuern für hohe Einkommen erhöht werden?",
+        question: "Soll Deutschland wirtschaftliche und sicherheitspolitische Kooperationen mit Staaten beenden, die regelmäßig gegen Menschenrechte oder das Völkerrecht verstoßen?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
-{
-        question: "Soll Deutschland Asylverfahren verstärkt in Drittstaaten auslagern?",
-        answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
-        ]
-    },
+
     
  {
         question: "Soll Deutschland aus der NATO austreten?",
@@ -201,7 +194,7 @@ const questions = [
     },
     
     {
-        question: "Soll die Zusammenarbeit mit autoritären Staaten zur Sicherung wirtschaftlicher Interessen reduziert werden?",
+        question: "Soll der Staat mehr Befugnisse erhalten, um gegen Extremismus und Terrorismus vorzugehen?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -287,7 +280,7 @@ const questions = [
     },
     
     {
-        question: "Soll der Staat stärker in die Wohnungswirtschaft eingreifen, um bezahlbaren Wohnraum zu sichern?",
+        question: "Sollen auch Beamte in die Rentenversicherung einzahlen?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -347,7 +340,7 @@ const questions = [
         ]
     },
 {
-        question: "Soll das Bürgergeld durch ein anreizorientiertes System mit mehr Sanktionen ersetzt werden?",
+        question: "Soll die Regierung mehr in Programme investieren, die Obdachlosigkeit verhindern und Betroffenen helfen?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -373,7 +366,7 @@ const questions = [
     },
     
     {
-        question: "Soll es ein staatlich finanziertes kostenloses Mittagessen für alle Schüler geben?",
+        question: "Sollen mehr Mittel für die Modernisierung von Schulen bereitgestellt werden?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -390,7 +383,7 @@ const questions = [
         ]
     },
 {
-        question: "Soll die Pflegeversicherung komplett steuerfinanziert werden?",
+        question: "Soll die Pflegeversicherung reformiert werden?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -399,7 +392,7 @@ const questions = [
     },
     
  {
-        question: "Soll Deutschland ein generelles Verbot von Leiharbeit im Gesundheitswesen einführen?",
+        question: "Soll der Staat stärker in die Wohnungswirtschaft eingreifen, um bezahlbaren Wohnraum zu sichern?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -468,7 +461,7 @@ const questions = [
     },
 
      {
-        question: "Soll die Integrationsförderung (z. B. Sprachkurse) vom Staat stärker finanziert werden?",
+        question: "Soll die Integrationsförderung vom Staat stärker finanziert werden?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -476,7 +469,7 @@ const questions = [
         ]
     },
 {
-        question: "Soll der Staat mehr Abschiebungen nach Afghanistan und Syrien durchführen?",
+        question: "Sollen Asylanten abgeschoben werden wenn der Fluchtgrund erlischt?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -511,7 +504,7 @@ const questions = [
     },
 
 {
-        question: "Soll die Sozialhilfe für Migranten in den ersten fünf Jahren nach Einreise eingeschränkt werden?",
+        question: "Sollen Kinder von Migranten bei Geburt in Deutschland automatisch einen deutschen Pass erhalten?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -579,7 +572,7 @@ const questions = [
         ]
     },
 {
-        question: "Soll der Ausbau der Windkraft an Land erleichtert werden?",
+        question: "Sollen PV Anlagen und Wärmepumpen Pflicht für Neubauten sein?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -588,7 +581,7 @@ const questions = [
     },
     
     {
-        question: "Soll die Förderung von E-Autos eingestellt und stattdessen Wasserstofftechnologie stärker unterstützt werden?",
+        question: "Sollen E-Autos weiter gefördert werden?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
