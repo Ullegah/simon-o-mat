@@ -639,7 +639,7 @@ const ueberschrift = [
 
 // Fragen in 12er Gruppen aufteilen
 questions.forEach((q, index) => {
-    q.push("index":index);
+    q.index = index;
     if (index <= 11){
         ueberschrift[0].questions.push(q)
     }
