@@ -709,7 +709,7 @@ function selectAnswer(questionIndex, points, selectedButton) {
 document.getElementById('evaluate-button').onclick = () => evaluateResults();
 
 function evaluateResults() {
-    const results = { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 };
+    const results = { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0, BSW: 0 };
 
     userAnswers.forEach(answer => {
         if (answer) { // Nur Punkte addieren, wenn eine Antwort gewählt wurde
@@ -728,6 +728,8 @@ function evaluateResults() {
 
     // Ergebnisse als Diagramm anzeigen
     updateChart(results);
+}
+
 }
 
     const resultsContainer = document.getElementById('results-container');
