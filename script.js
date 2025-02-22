@@ -3,9 +3,9 @@ const questions = [
     {
         question: "Sollte die Videoüberwachung an öffentlichen Plätzen ausgeweitet werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 0, FDP: 0, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 1, FDP: 1, AfD: 0, Linke: 0 } }
         ]
     },
 
@@ -13,8 +13,8 @@ const questions = [
     {
         question: "Soll das Wahlalter für Bundestagswahlen auf 16 Jahre gesenkt werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: -1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
@@ -22,16 +22,16 @@ const questions = [
  {
         question: "Soll der Zugang zu privatem Waffenbesitz in Deutschland erleichtert werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: -1, SPD: -1, Grüne: 1, FDP: 0, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: 1, SPD: 1, Grüne: -1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 1, AfD: 0, Linke: 0 } }
         ]
     },
 {
         question: "Sollte der Bund den Kommunen mehr finanzielle Mittel zur Verfügung stellen, um lokale Projekte besser umsetzen zu können?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: 1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: -1, Linke: -1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
