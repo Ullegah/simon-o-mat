@@ -701,6 +701,7 @@ function displayQuestions() {
         questionDiv.innerHTML = `<h3>${index + 1}. ${q.question}</h3>`;
         q.answers.forEach(answer => {
             const button = document.createElement('button');
+         
             button.textContent = answer.text;
             button.onclick = () => selectAnswer(index, answer.points, button);
             questionDiv.appendChild(button);
