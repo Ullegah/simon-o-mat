@@ -749,14 +749,6 @@ function evaluateResults() {
     updateChart(results);
 }
 
-    const resultsContainer = document.getElementById('results-container');
-    resultsContainer.innerHTML = '<h2>Ergebnisse</h2>';
-    for (const party in results) {
-        resultsContainer.innerHTML += `<p>${party}: ${results[party]} Punkte</p>`;
-    }
-
-
-
 let resultsChart;
 
 function updateChart(results) {
