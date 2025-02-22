@@ -678,7 +678,7 @@ function displayUeberschrift() {
                 const button = document.createElement('button');
                 button.textContent = answer.text;
                 button.question =q.index
-                button.onclick = () => selectAnswer(q.index, answer.points, button);
+                button.onclick = (this) => selectAnswer(this, q.index, answer.points, button);
                 questionDiv.appendChild(button);
             });
             
@@ -714,9 +714,9 @@ function displayQuestions() {
 
 let userAnswers = Array(questions.length).fill(null);
 
-function selectAnswer(questionIndex, points, selectedButton) {
+function selectAnswer(ref, questionIndex, points, selectedButton) {
     // Setze den vorherigen Button zurück
-    const buttons = document.querySelectorAll(`#questions-container div:nth-child(${questionIndex +2}) button`);
+    const buttons = document.querySelectorAll(`${ref.parentNode} button`);
     buttons.forEach(button => {
         button.classList.remove('selected');
         button.classList.add('not-selected'); // Hinzufügen der Klasse für nicht ausgewählte Buttons
