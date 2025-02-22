@@ -628,12 +628,12 @@ const questions = [
 ];
 
 const ueberschrift = [
-    { title: "Thema 1", questions: [] },
-    { title: "Thema 2", questions: [] },
-    { title: "Thema 3", questions: [] },
-    { title: "Thema 4", questions: [] },
-    { title: "Thema 5", questions: [] },
-    { title: "Thema 6", questions: [] }
+    { title: "Innenpolitik & Gesellschaft", questions: [] },
+    { title: "Außen- & Sicherheitspolitik", questions: [] },
+    { title: "Wirtschaft & Finanzen", questions: [] },
+    { title: "Soziales, Bildung & Gesundheit", questions: [] },
+    { title: "Migration & Integration", questions: [] },
+    { title: "Umwelt, Infrastruktur & Klima", questions: [] }
 ];
 
 // Fragen in 12er Gruppen aufteilen
