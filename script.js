@@ -715,9 +715,8 @@ displayUeberschrift();
 let userAnswers = Array(questions.length).fill(null);
 
 function selectAnswer(ref, questionIndex, points, selectedButton) {
-    alert(ref, questionIndex, points, selectedButton)
     // Setze den vorherigen Button zurück
-    const buttons = document.querySelectorAll(`${ref.parentNode} button`);
+    const buttons = ref.parentNode.querySelectorAll("button");
     buttons.forEach(button => {
         button.classList.remove('selected');
         button.classList.add('not-selected'); // Hinzufügen der Klasse für nicht ausgewählte Buttons
