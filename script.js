@@ -40,16 +40,16 @@ const questions = [
  {
         question: "Soll die Polizei in Deutschland mehr Befugnisse zur Überwachung von Kommunikation erhalten?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: -1, FDP: -1, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: 1, FDP: 1, AfD: -1, Linke: 1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
 {
         question: "Soll das öffentlich-rechtliche Rundfunksystem in seiner aktuellen Form bestehen bleiben?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
@@ -57,18 +57,18 @@ const questions = [
 {
         question: "Soll die direkte Demokratie in Deutschland durch Volksentscheide gestärkt werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 1, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
 
  {
         question: "Soll der Mitarbeiterstab des Staates verkleinert werden ?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: -1, Grüne: 0, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: 1, Grüne: 0, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 1, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
 
@@ -76,25 +76,25 @@ const questions = [
     {
         question: "Soll das Streikrecht in systemrelevanten Bereichen wie dem Gesundheitswesen eingeschränkt werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 0, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: 0, SPD: 1, Grüne: -1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 1, SPD: -1, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
 
 {
         question: "Soll die Nutzung von Cannabis vollständig legalisiert werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: -1 } },
+            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: 1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
 {
         question: "Soll es verpflichtende Zivildienst- oder Wehrdienstprogramme für junge Erwachsene geben?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: 1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
@@ -102,16 +102,16 @@ const questions = [
  {
         question: "Soll die Bürokratie abgebaut werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: 1, Linke: 0 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: -1, Linke: 0 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
 {
         question: "Soll Deutschland seine Verteidigungsausgaben auf das NATO-Ziel von 2 % des BIP anheben?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: 1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
@@ -119,25 +119,25 @@ const questions = [
     {
         question: "Soll die Europäische Union weitere Staaten wie die Ukraine oder den Westbalkan aufnehmen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: 0 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: 0 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 1 } }
         ]
     },
 
      {
         question: "Soll Deutschland stärker wirtschaftliche Abhängigkeiten von China und anderen Nicht-Demokratien reduzieren?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: 0 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: 0 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 1 } }
         ]
     },
 {
         question: "Soll Deutschland Waffenexporte in Krisengebiete weiterhin zulassen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: -1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: 1, Linke: 1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
@@ -145,16 +145,16 @@ const questions = [
  {
         question: "Soll die Bundeswehr stärker in internationale Militäreinsätze eingebunden werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: 1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
 {
         question: "Soll Deutschland seine Entwicklungshilfezahlungen an wirtschaftliche Reformen in den Empfängerländern koppeln?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: 1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
@@ -162,18 +162,18 @@ const questions = [
     {
         question: "Soll die EU eine gemeinsame Armee aufbauen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 0, Grüne: 0, FDP: 1, AfD: -1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: 0, AfD: 1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: -1 } }
         ]
     },
 
 {
         question: "Soll Deutschland wirtschaftliche und sicherheitspolitische Kooperationen mit Staaten beenden, die regelmäßig gegen Menschenrechte oder das Völkerrecht verstoßen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: -1, FDP: 0, AfD: -1, Linke: -1 } }
         ]
     },
 
@@ -181,16 +181,16 @@ const questions = [
  {
         question: "Soll Deutschland aus der NATO austreten?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 1, Linke: 1 } },
+            { text: "Nein", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: -1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: -1, SPD: -1, Grüne: 0, FDP: -1, AfD: 0, Linke: 0 } }
         ]
     },
 {
         question: "Soll der Export deutscher Rüstungsgüter komplett verboten werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: -1, SPD: -1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: 1, SPD: 1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
@@ -198,8 +198,8 @@ const questions = [
     {
         question: "Soll der Staat mehr Befugnisse erhalten, um gegen Extremismus und Terrorismus vorzugehen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
@@ -207,8 +207,8 @@ const questions = [
  {
         question: "Soll die EU eine einheitliche Außenpolitik mit Vetorecht für alle Mitgliedsstaaten einführen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: -1, Linke: -1 } },
+            { text: "Nein", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: 1, Linke: 1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
@@ -217,7 +217,7 @@ const questions = [
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: -1 } }
         ]
     },
     
@@ -232,43 +232,43 @@ const questions = [
 {
         question: "Soll der Mindestlohn in Deutschland weiter erhöht werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 0, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: 0, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: -1, FDP: 1, AfD: 0, Linke: -1 } }
         ]
     },
     
     {
-        question: "Soll Deutschland auf ein rein kapitalgedecktes Rentensystem umsteigen?",
+        question: "Soll Deutschland auf ein teilweise kapitalgedecktes Rentensystem umsteigen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: -1, Grüne: 1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: 1, Grüne: -1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: -1 } }
         ]
     },
 
 {
         question: "Soll der Staat Unternehmen stärker bei der Digitalisierung unterstützen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: 1, SPD: 1, Grüne: 1, FDP: 1, AfD: 0, Linke: 1 } },
+            { text: "Nein", points: { CDU: -1, SPD: -1, Grüne: -1, FDP: -1, AfD: 0, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 1, Linke: -1 } }
         ]
     },
 {
         question: "Soll die Schuldenbremse dauerhaft ausgesetzt werden, um mehr Investitionen zu ermöglichen?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
-            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+            { text: "Ja", points: { CDU: -1, SPD: -1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: 1, SPD: 1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 1, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
     
  {
         question: "Soll das Arbeitslosengeld II (Bürgergeld) durch ein anreizorientiertes System mit mehr Sanktionen ersetzt werden?",
         answers: [
-            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
-            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Ja", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Nein", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
