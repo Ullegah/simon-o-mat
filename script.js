@@ -44,13 +44,32 @@ const questions = [
         ]
     },
 {
-        question: "Soll der Schutz von Whistleblowern gesetzlich verbessert werden?",
+        question: "Soll das öffentlich-rechtliche Rundfunksystem in seiner aktuellen Form bestehen bleiben?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
+
+{
+        question: "Soll die direkte Demokratie in Deutschland durch Volksentscheide gestärkt werden?",
+        answers: [
+            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+        ]
+    },
+
+ {
+        question: "Soll der Mitarbeiterstab des Staates verkleinert werden ?",
+        answers: [
+            { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
+            { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
+            { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
+        ]
+    },
+
     
     {
         question: "Soll das Streikrecht in systemrelevanten Bereichen wie dem Gesundheitswesen eingeschränkt werden?",
