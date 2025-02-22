@@ -677,6 +677,7 @@ function displayUeberschrift() {
             q.answers.forEach(answer => {
                 const button = document.createElement('button');
                 button.textContent = answer.text;
+                button.question =q.index
                 button.onclick = () => selectAnswer(q.index, answer.points, button);
                 questionDiv.appendChild(button);
             });
