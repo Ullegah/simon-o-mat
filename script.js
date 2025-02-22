@@ -693,11 +693,12 @@ function displayQuestions() {
 let userAnswers = Array(questions.length).fill(null);
 
 function selectAnswer(questionIndex, points, selectedButton) {
-    // Hole alle Buttons der aktuellen Frage
-    const questionDivs = document.querySelectorAll("#questions-container > div");
+    // Finde das richtige Frage-Element
+    const allQuestionDivs = document.querySelectorAll("#questions-container h3");
     
-    if (questionDivs[questionIndex]) {
-        const buttons = questionDivs[questionIndex].querySelectorAll("button");
+    if (allQuestionDivs.length > questionIndex) {
+        const questionDiv = allQuestionDivs[questionIndex].parentElement;
+        const buttons = questionDiv.querySelectorAll("button");
 
         buttons.forEach(button => {
             button.classList.remove("selected");
@@ -712,6 +713,7 @@ function selectAnswer(questionIndex, points, selectedButton) {
         console.error(`Frage mit Index ${questionIndex} nicht gefunden.`);
     }
 }
+
 
 
 document.getElementById('evaluate-button').onclick = () => evaluateResults();
