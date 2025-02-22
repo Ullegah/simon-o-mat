@@ -667,7 +667,7 @@ function displayUeberschrift() {
         container.appendChild(groupDiv);
     });
 }
-
+displayUeberschrift();
 
 
 
@@ -726,5 +726,5 @@ function evaluateResults() {
 }
 
 // Initialisiere das Fragen-Display
-displayUeberschrift();
+
 displayQuestions();
