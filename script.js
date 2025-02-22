@@ -639,8 +639,26 @@ const ueberschrift = [
 
 // Fragen in 12er Gruppen aufteilen
 questions.forEach((q, index) => {
-    const groupIndex = Math.floor(index / 12);
-    ueberschrift[groupIndex].questions.push(q);
+    if (index <= 11){
+        ueberschrift[0].questions.push(q)
+    }
+      if (index > 11 && index <= 23){
+        ueberschrift[1].questions.push(q)
+    }
+
+    if (index > 23 && index <= 35){
+        ueberschrift[2].questions.push(q)
+    }
+    if (index > 35 && index <= 47){
+        ueberschrift[3].questions.push(q)
+    }
+    if (index > 47 && index <= 59){
+        ueberschrift[4].questions.push(q)
+    }
+    if (index > 59 && index <= 71){
+        ueberschrift[5].questions.push(q)
+    }
+    
 });
 
 function displayUeberschrift() {
