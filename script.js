@@ -694,7 +694,7 @@ let userAnswers = Array(questions.length).fill(null);
 
 function selectAnswer(questionIndex, points, selectedButton) {
     // Setze den vorherigen Button zurück
-   const buttons = document.querySelectorAll(`#questions-container div button`);
+    const buttons = document.querySelectorAll(`#questions-container div:nth-child(${questionIndex + 1}) button`);
 
     buttons.forEach(button => {
         button.classList.remove('selected');
