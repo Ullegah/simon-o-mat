@@ -730,7 +730,6 @@ function evaluateResults() {
     updateChart(results);
 }
 
-}
 
     const resultsContainer = document.getElementById('results-container');
     resultsContainer.innerHTML = '<h2>Ergebnisse</h2>';
