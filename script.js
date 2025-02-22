@@ -639,6 +639,7 @@ const ueberschrift = [
 
 // Fragen in 12er Gruppen aufteilen
 questions.forEach((q, index) => {
+    q.push ("index":index)
     if (index <= 11){
         ueberschrift[0].questions.push(q)
     }
@@ -676,7 +677,7 @@ function displayUeberschrift() {
             q.answers.forEach(answer => {
                 const button = document.createElement('button');
                 button.textContent = answer.text;
-                button.onclick = () => selectAnswer(index, answer.points, button);
+                button.onclick = () => selectAnswer(q.index, answer.points, button);
                 questionDiv.appendChild(button);
             });
             
