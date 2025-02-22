@@ -693,9 +693,9 @@ displayUeberschrift();
 
 
 
-    
+/*    
 // Funktion zum Anzeigen der Fragen
-function displayQuestions() {
+//function displayQuestions() {
     const container = document.getElementById('questions-container');
     container.innerHTML = ''; // Leere den Container
     questions.forEach((q, index) => {
@@ -711,10 +711,11 @@ function displayQuestions() {
         container.appendChild(questionDiv);
     });
 }
-
+*/
 let userAnswers = Array(questions.length).fill(null);
 
 function selectAnswer(ref, questionIndex, points, selectedButton) {
+    alert(ref, questionIndex, points, selectedButton)
     // Setze den vorherigen Button zurück
     const buttons = document.querySelectorAll(`${ref.parentNode} button`);
     buttons.forEach(button => {
