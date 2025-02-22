@@ -1,5 +1,5 @@
 
-const questions = [
+const question = [
     {
         question: "Sollte die Videoüberwachung an öffentlichen Plätzen ausgeweitet werden?",
         answers: [
@@ -628,18 +628,19 @@ const questions = [
 ];
 
 const ueberschrift = [
-    { title: "Thema 1", questions: [] },
-    { title: "Thema 2", questions: [] },
-    { title: "Thema 3", questions: [] },
-    { title: "Thema 4", questions: [] },
-    { title: "Thema 5", questions: [] },
-    { title: "Thema 6", questions: [] }
+    { title: "Thema 1", question: [] },
+    { title: "Thema 2", question: [] },
+    { title: "Thema 3", question: [] },
+    { title: "Thema 4", question: [] },
+    { title: "Thema 5", question: [] },
+    { title: "Thema 6", question: [] }
 ];
 
 // Fragen in 12er Gruppen aufteilen
 questions.forEach((q, index) => {
     const groupIndex = Math.floor(index / 12);
     ueberschrift[groupIndex].questions.push(q);
+});
 
 function displayUeberschrift() {
     const container = document.getElementById('questions-container');
@@ -649,7 +650,7 @@ function displayUeberschrift() {
         const groupDiv = document.createElement('div');
         groupDiv.innerHTML = `<h2>${group.title}</h2>`;
         
-        group.questions.forEach((q, index) => {
+        group.question.forEach((q, index) => {
             const questionDiv = document.createElement('div');
             questionDiv.innerHTML = `<h3>${index + 1}. ${q.question}</h3>`;
             
