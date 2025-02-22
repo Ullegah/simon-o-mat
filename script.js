@@ -693,27 +693,29 @@ function displayQuestions() {
 let userAnswers = Array(questions.length).fill(null);
 
 function selectAnswer(questionIndex, points, selectedButton) {
-    // Finde das richtige Frage-Element
-    const allQuestionDivs = document.querySelectorAll("#questions-container h3");
-    
+    // Finde alle Fragen-Blöcke innerhalb der Überschriften
+    const allQuestionDivs = document.querySelectorAll("#questions-container div div");
+
     if (allQuestionDivs.length > questionIndex) {
-        const questionDiv = allQuestionDivs[questionIndex].parentElement;
+        const questionDiv = allQuestionDivs[questionIndex]; // Richtiges Frage-Div finden
         const buttons = questionDiv.querySelectorAll("button");
 
+        // Entferne vorherige Auswahl innerhalb der gleichen Frage
         buttons.forEach(button => {
             button.classList.remove("selected");
-            button.classList.add("not-selected"); // Nicht ausgewählte Buttons hervorheben
+            button.classList.add("not-selected");
         });
 
-        // Setze die aktuelle Auswahl
+        // Speichere die Auswahl
         userAnswers[questionIndex] = points;
+
+        // Markiere den geklickten Button als ausgewählt
         selectedButton.classList.add("selected");
         selectedButton.classList.remove("not-selected");
     } else {
         console.error(`Frage mit Index ${questionIndex} nicht gefunden.`);
     }
 }
-
 
 
 document.getElementById('evaluate-button').onclick = () => evaluateResults();
