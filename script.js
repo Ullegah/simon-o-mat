@@ -98,7 +98,7 @@ const questions = [
     },
     
  {
-        question: "Soll die Parteienfinanzierung in Deutschland reformiert werden?",
+        question: "Soll die Bürokratie abgebaut werden?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
