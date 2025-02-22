@@ -1,4 +1,5 @@
 
+
 const questions = [
     {
         question: "Sollte die Videoüberwachung an öffentlichen Plätzen ausgeweitet werden?",
@@ -645,31 +646,32 @@ questions.forEach((q, index) => {
 function displayUeberschrift() {
     const container = document.getElementById('questions-container');
     container.innerHTML = '';
-
-    let globalIndex = 0;  // Richtiger Index über ALLE Fragen hinweg
-
+    
     ueberschrift.forEach(group => {
         const groupDiv = document.createElement('div');
         groupDiv.innerHTML = `<h2>${group.title}</h2>`;
-
-        group.questions.forEach(q => {
+        
+        group.questions.forEach((q, index) => {
             const questionDiv = document.createElement('div');
-            questionDiv.innerHTML = `<h3>${globalIndex + 1}. ${q.question}</h3>`;
-
+            questionDiv.innerHTML = `<h3>${index + 1}. ${q.question}</h3>`;
+            
             q.answers.forEach(answer => {
                 const button = document.createElement('button');
                 button.textContent = answer.text;
-                button.onclick = () => selectAnswer(globalIndex, answer.points, button);
+                button.onclick = () => selectAnswer(index, answer.points, button);
                 questionDiv.appendChild(button);
             });
-
+            
             groupDiv.appendChild(questionDiv);
-            globalIndex++;  // Index für alle Fragen erhöhen
         });
-
+        
         container.appendChild(groupDiv);
     });
 }
+displayUeberschrift();
+
+
+
 
     
 // Funktion zum Anzeigen der Fragen
@@ -692,23 +694,18 @@ function displayQuestions() {
 let userAnswers = Array(questions.length).fill(null);
 
 function selectAnswer(questionIndex, points, selectedButton) {
-    // Alle Buttons im gesamten Container durchsuchen
-    const allButtons = document.querySelectorAll("#questions-container button");
+    // Setze den vorherigen Button zurück
+    const buttons = document.querySelectorAll(`#questions-container div:nth-child(${questionIndex + 1}) button`);
 
-    // Entferne vorherige Auswahl für alle Fragen
-    allButtons.forEach(button => {
-        button.classList.remove("selected");
-        button.classList.add("not-selected");
+    buttons.forEach(button => {
+        button.classList.remove('selected');
+        button.classList.add('not-selected'); // Hinzufügen der Klasse für nicht ausgewählte Buttons
     });
 
-    // Speichere die Auswahl für die aktuelle Frage
+    // Setze die aktuelle Auswahl
     userAnswers[questionIndex] = points;
-
-    // Markiere den ausgewählten Button
-    selectedButton.classList.add("selected");
-    selectedButton.classList.remove("not-selected");
+    selectedButton.classList.add('selected');
 }
-
 
 document.getElementById('evaluate-button').onclick = () => evaluateResults();
 
