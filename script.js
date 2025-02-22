@@ -727,4 +727,4 @@ function evaluateResults() {
 
 // Initialisiere das Fragen-Display
 
-displayQuestions();
+displayUeberschrift();
