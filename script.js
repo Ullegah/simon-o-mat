@@ -1,3 +1,4 @@
+
 const questions = [
     {
         question: "Sollte die Videoüberwachung an öffentlichen Plätzen ausgeweitet werden?",
@@ -623,10 +624,54 @@ const questions = [
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 0, FDP: 0, AfD: 0, Linke: 0 } }
         ]
     },
-    
-    // Füge hier die weiteren 3 Fragen mit der neuen Antwortoption hinzu
+  
 ];
 
+const ueberschrift = [
+    { title: "Thema 1", questions: [] },
+    { title: "Thema 2", questions: [] },
+    { title: "Thema 3", questions: [] },
+    { title: "Thema 4", questions: [] },
+    { title: "Thema 5", questions: [] },
+    { title: "Thema 6", questions: [] }
+];
+
+// Fragen in 12er Gruppen aufteilen
+questions.forEach((q, index) => {
+    const groupIndex = Math.floor(index / 12);
+    ueberschrift[groupIndex].questions.push(q);
+
+function displayUeberschrift() {
+    const container = document.getElementById('questions-container');
+    container.innerHTML = '';
+    
+    ueberschrift.forEach(group => {
+        const groupDiv = document.createElement('div');
+        groupDiv.innerHTML = `<h2>${group.title}</h2>`;
+        
+        group.questions.forEach((q, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.innerHTML = `<h3>${index + 1}. ${q.question}</h3>`;
+            
+            q.answers.forEach(answer => {
+                const button = document.createElement('button');
+                button.textContent = answer.text;
+                button.onclick = () => selectAnswer(index, answer.points, button);
+                questionDiv.appendChild(button);
+            });
+            
+            groupDiv.appendChild(questionDiv);
+        });
+        
+        container.appendChild(groupDiv);
+    });
+}
+
+displayUeberschrift();
+
+
+
+    
 // Funktion zum Anzeigen der Fragen
 function displayQuestions() {
     const container = document.getElementById('questions-container');
