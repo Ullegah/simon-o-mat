@@ -9,7 +9,7 @@ const questions = [
             { text: "Enthaltung", points: { CDU: 0, SPD: 0, Grüne: 1, FDP: 1, AfD: 0, Linke: 0 } }
         ]
     },
-
+ 
     
     {
         question: "Soll das Wahlalter für Bundestagswahlen auf 16 Jahre gesenkt werden?",
