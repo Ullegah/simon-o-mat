@@ -720,9 +720,60 @@ function evaluateResults() {
 
     const resultsContainer = document.getElementById('results-container');
     resultsContainer.innerHTML = '<h2>Ergebnisse</h2>';
+
     for (const party in results) {
         resultsContainer.innerHTML += `<p>${party}: ${results[party]} Punkte</p>`;
     }
+
+    // Ergebnisse als Diagramm anzeigen
+    updateChart(results);
+}
+
+    const resultsContainer = document.getElementById('results-container');
+    resultsContainer.innerHTML = '<h2>Ergebnisse</h2>';
+    for (const party in results) {
+        resultsContainer.innerHTML += `<p>${party}: ${results[party]} Punkte</p>`;
+    }
+}
+
+
+let resultsChart;
+
+function updateChart(results) {
+    const ctx = document.getElementById('resultsChart').getContext('2d');
+    
+    if (resultsChart) {
+        resultsChart.destroy(); // Falls ein Diagramm existiert, lösche es zuerst
+    }
+
+    resultsChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['CDU', 'SPD', 'Grüne', 'FDP', 'AfD', 'Linke'],
+            datasets: [{
+                label: 'Punkte',
+                data: [
+                    results.CDU, 
+                    results.SPD, 
+                    results.Grüne, 
+                    results.FDP, 
+                    results.AfD, 
+                    results.Linke
+                ],
+                backgroundColor: ['black', 'red', 'green', 'yellow', 'blue', 'pink'],
+                borderColor: ['black', 'darkred', 'darkgreen', 'gold', 'darkblue', 'deeppink'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
 }
 
 // Initialisiere das Fragen-Display
