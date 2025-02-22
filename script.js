@@ -678,7 +678,7 @@ function displayUeberschrift() {
                 const button = document.createElement('button');
                 button.textContent = answer.text;
                 button.question =q.index
-                button.onclick = (this) => selectAnswer(this, q.index, answer.points, button);
+                button.onclick = () => selectAnswer(this, q.index, answer.points, button);
                 questionDiv.appendChild(button);
             });
             
