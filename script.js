@@ -735,7 +735,7 @@ function evaluateResults() {
     for (const party in results) {
         resultsContainer.innerHTML += `<p>${party}: ${results[party]} Punkte</p>`;
     }
-}
+
 
 
 let resultsChart;
