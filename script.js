@@ -1,6 +1,6 @@
 const questions = [
     {
-        question: "Sollten Steuern für hohe Einkommen erhöht werden?",
+        question: "Sollte die Videoüberwachung an öffentlichen Plätzen ausgeweitet werden?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -10,7 +10,7 @@ const questions = [
 
     
     {
-        question: "Sollte der Klimaschutz Vorrang vor wirtschaftlichem Wachstum haben?",
+        question: "Soll das Wahlalter für Bundestagswahlen auf 16 Jahre gesenkt werden?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -19,7 +19,7 @@ const questions = [
     },
 
  {
-        question: "Sollten Steuern für hohe Einkommen erhöht werden?",
+        question: "Soll der Zugang zu privatem Waffenbesitz in Deutschland erleichtert werden?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -27,7 +27,7 @@ const questions = [
         ]
     },
 {
-        question: "Sollten Steuern für hohe Einkommen DEUTLICH erhöht werden?",
+        question: "Soll der Ausbau von Ganztagsschulen verpflichtend vorangetrieben werden?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -36,7 +36,7 @@ const questions = [
     },
     
  {
-        question: "Sollten Steuern für hohe Einkommen erhöht werden?",
+        question: "Soll die Polizei in Deutschland mehr Befugnisse zur Überwachung von Kommunikation erhalten?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -44,7 +44,7 @@ const questions = [
         ]
     },
 {
-        question: "Sollten Steuern für hohe Einkommen DEUTLICH erhöht werden?",
+        question: "Soll der Schutz von Whistleblowern gesetzlich verbessert werden?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
@@ -53,7 +53,7 @@ const questions = [
     },
     
     {
-        question: "Sollte der Klimaschutz Vorrang vor wirtschaftlichem Wachstum haben?",
+        question: "Soll das Streikrecht in systemrelevanten Bereichen wie dem Gesundheitswesen eingeschränkt werden?",
         answers: [
             { text: "Ja", points: { CDU: -1, SPD: 1, Grüne: 1, FDP: -1, AfD: -1, Linke: 1 } },
             { text: "Nein", points: { CDU: 1, SPD: -1, Grüne: -1, FDP: 1, AfD: 1, Linke: -1 } },
